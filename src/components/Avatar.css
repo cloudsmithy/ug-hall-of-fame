@@ -1,0 +1,79 @@
+/* ============================================================
+   头像
+   ============================================================ */
+
+.avatar {
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  object-fit: cover;
+  background: var(--bg-raise);
+}
+
+.avatar--initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  /* 深色文字压在亮色块上，比白字对比度更稳 */
+  color: #10131a;
+  user-select: none;
+}
+
+.avatar--sm {
+  width: 34px;
+  height: 34px;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-sm);
+}
+
+.avatar--md {
+  width: 52px;
+  height: 52px;
+  font-size: var(--text-xl);
+}
+
+.avatar--lg {
+  width: 76px;
+  height: 76px;
+  font-size: var(--text-2xl);
+  border-radius: var(--radius-lg);
+}
+
+/* ---------- 照片头像 ----------
+   加载期间用首字色块垫底，加载完成后照片淡入盖上去。
+   两者叠在同一个 frame 里，尺寸一致，所以不会有跳动。 */
+.avatar-frame {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-frame--sm {
+  width: 34px;
+  height: 34px;
+}
+
+.avatar-frame--md {
+  width: 52px;
+  height: 52px;
+}
+
+.avatar-frame--lg {
+  width: 76px;
+  height: 76px;
+}
+
+.avatar--placeholder {
+  position: absolute;
+  inset: 0;
+}
+
+.avatar--photo {
+  position: relative;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.avatar--photo.is-loaded {
+  opacity: 1;
+}

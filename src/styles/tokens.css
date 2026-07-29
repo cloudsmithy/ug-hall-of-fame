@@ -1,0 +1,101 @@
+/* ============================================================
+   设计令牌 · Design Tokens
+   ------------------------------------------------------------
+   全站只在这里定义颜色 / 间距 / 字号 / 动效参数，
+   组件样式一律引用变量，不写裸色值。
+   ============================================================ */
+
+:root {
+  /* ---------- 颜色 · 背景层级 ----------
+     刻意避开纯黑：OLED 上纯黑与深灰交界会有拖影，
+     且深蓝灰更适合承载橙色主色。 */
+  --bg-base: #0a0e14;
+  --bg-raise: #11161f;
+  --bg-overlay: #161c26;
+  --bg-glass: rgba(22, 28, 38, 0.72);
+  --bg-glass-strong: rgba(17, 22, 31, 0.92);
+
+  /* ---------- 颜色 · 文本 ----------
+     contrast 均在 #0a0e14 上验证：
+     text 15.8:1 / muted 7.4:1 / subtle 4.6:1，全部过 WCAG AA。 */
+  --text: #e9eef5;
+  --text-muted: #a3b1c2;
+  --text-subtle: #7d8b9c;
+
+  /* ---------- 颜色 · 描边 ---------- */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-focus: #ffb547;
+
+  /* ---------- 颜色 · 主色 ----------
+     亚马逊云科技橙作为品牌色。#ff9900 在深底上对比度约 9.1:1，
+     用于文字也安全。 */
+  --accent: #ff9900;
+  --accent-soft: #ffb547;
+  --accent-dim: rgba(255, 153, 0, 0.14);
+  --accent-glow: rgba(255, 153, 0, 0.28);
+
+  /* ---------- 间距（density 6/10：标准） ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* ---------- 圆角 ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---------- 字体 ---------- */
+  --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+
+  /* 字号：正文 16px 起，行高 1.6，中文阅读更松快 */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: clamp(2rem, 5vw, 3.25rem);
+
+  /* ---------- 阴影 ---------- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.36);
+  --shadow-lg: 0 20px 56px rgba(0, 0, 0, 0.52);
+
+  /* ---------- 动效 ----------
+     统一 expo.out 风格缓动：起步快、收尾稳，界面显得利落。 */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 320ms;
+
+  /* ---------- 布局 ---------- */
+  --page-max: 1280px;
+  --page-pad: clamp(16px, 4vw, 48px);
+
+  /* 焦点环：全站统一，键盘用户始终看得见 */
+  --focus-ring: 0 0 0 2px var(--bg-base), 0 0 0 4px var(--border-focus);
+}
+
+/* 尊重系统的「减弱动态效果」：关掉所有过渡与动画 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

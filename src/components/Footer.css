@@ -1,0 +1,29 @@
+/* ============================================================
+   页脚
+   ============================================================ */
+
+.site-footer {
+  margin-top: auto;
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-5);
+}
+
+.footer-text {
+  font-size: var(--text-xs);
+  color: var(--text-subtle);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+}

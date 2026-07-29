@@ -1,0 +1,176 @@
+/* ============================================================
+   页头
+   ============================================================ */
+
+.site-header {
+  position: relative;
+  padding-top: clamp(40px, 7vw, 80px);
+  padding-bottom: var(--space-5);
+}
+
+.header-inner {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* ---------- 品牌区 ---------- */
+.brand-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--accent-soft);
+  background: var(--accent-dim);
+  border: 1px solid rgba(255, 153, 0, 0.24);
+  border-radius: var(--radius-pill);
+}
+
+.brand-title {
+  margin-top: var(--space-4);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  /* 标题做一层暖色渐变，比纯白更有质感 */
+  background: linear-gradient(120deg, #fff 12%, var(--accent-soft) 62%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-subtitle {
+  margin-top: var(--space-3);
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+}
+
+.brand-tagline {
+  margin-top: var(--space-2);
+  max-width: 52ch;
+  font-size: var(--text-sm);
+  color: var(--text-subtle);
+}
+
+/* ---------- KPI 统计条 ---------- */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+
+.stat {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse; /* 视觉上数字在上、标签在下，但 DOM 保持 dt→dd 语义 */
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-1);
+  text-align: center;
+}
+
+/* 项与项之间的细分隔线，最后一项不画 */
+.stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: calc(var(--space-3) / -2);
+  top: 18%;
+  bottom: 18%;
+  width: 1px;
+  background: var(--border);
+}
+
+.stat-value {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--stat-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--text-subtle);
+  white-space: nowrap;
+}
+
+/* 统计条上的分隔线在窄屏换行后会错位，直接隐藏 */
+@media (max-width: 560px) {
+  .stat:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* ---------- 角色图例 ---------- */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  /* 同色光晕，让小圆点在深底上更醒目 */
+  box-shadow: 0 0 0 3px color-mix(in srgb, currentColor 0%, transparent);
+  flex-shrink: 0;
+}
+
+.legend-short {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.legend-label {
+  color: var(--text-subtle);
+}
+
+.legend-tip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-subtle);
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  cursor: help;
+}
+
+@media (max-width: 640px) {
+  /* 窄屏只留缩写，完整名称藏起来省空间 */
+  .legend-label {
+    display: none;
+  }
+}

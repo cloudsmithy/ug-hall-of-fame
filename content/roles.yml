@@ -1,0 +1,52 @@
+# ============================================================
+#  角色定义
+# ============================================================
+#  key         : 成员 YAML 里 roles 字段引用的标识
+#  label       : 完整显示名
+#  short       : 徽章 / 筛选按钮上的缩写
+#  color       : 主题色，用于徽章、地图标记、卡片描边
+#  description : 角色说明，图例悬浮时显示
+#  order       : 图例与筛选栏中的排列顺序（小的在前）
+# ============================================================
+
+- key: HERO
+  label: Community Hero
+  short: Hero
+  color: "#fbbf24"
+  order: 1
+  description: 社区英雄，长期深度贡献、影响力卓著的标杆人物。
+
+- key: UGL
+  label: User Group Leader
+  short: UGL
+  color: "#ff9900"
+  order: 2
+  description: 亚马逊云科技 User Group 主理人，负责组织本地社区活动与布道。
+
+- key: UGA
+  label: User Group Ambassador
+  short: UGA
+  color: "#2dd4bf"
+  order: 3
+  description: User Group 大使，连接多个社区、推动跨区域协作。
+
+- key: UGO
+  label: User Group Organizer
+  short: UGO
+  color: "#f472b6"
+  order: 4
+  description: User Group 组织者，负责活动策划、场地协调与社区日常运转。
+
+- key: CB
+  label: Community Builder
+  short: CB
+  color: "#a78bfa"
+  order: 5
+  description: 亚马逊云科技 Community Builder，深耕某一技术领域的内容创作者。
+
+- key: VOL
+  label: 志愿者 Volunteer
+  short: 志愿者
+  color: "#38bdf8"
+  order: 6
+  description: 社区志愿者，协助活动组织、现场支持与内容运营。

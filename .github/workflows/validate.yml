@@ -1,0 +1,31 @@
+name: 校验内容
+
+# 提 PR 或推到 main 时自动跑：先校验 YAML，再确认能构建出来。
+# 贡献者只改 YAML 的话，第一步就能拦住绝大多数手写错误。
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  # 也支持在 Actions 页面手动触发
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # 用 lockfile 精确安装，保证 CI 和本地跑的是同一套依赖
+      - run: npm ci
+
+      - name: 校验 content/ 下的 YAML
+        run: npm run validate
+
+      - name: 确认能构建
+        run: npm run build

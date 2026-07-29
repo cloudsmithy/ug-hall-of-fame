@@ -1,0 +1,63 @@
+/* ============================================================
+   卡片墙
+   ============================================================ */
+
+.roster-grid {
+  display: grid;
+  /* auto-fill + minmax：宽屏自动铺满，窄屏自然降列，
+     不用手写一堆断点 */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 480px) {
+  .roster-grid {
+    /* 320px 视口下 280px 最小宽会溢出，这里放开成单列 */
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 空状态 ---------- */
+.roster-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+  border-radius: var(--radius-lg);
+}
+
+.roster-empty svg {
+  color: var(--text-subtle);
+}
+
+.roster-empty-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.roster-empty-hint {
+  max-width: 44ch;
+  font-size: var(--text-sm);
+  color: var(--text-subtle);
+}
+
+.roster-empty-btn {
+  margin-top: var(--space-2);
+  height: 40px;
+  padding: 0 var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-soft);
+  background: var(--accent-dim);
+  border: 1px solid rgba(255, 153, 0, 0.32);
+  border-radius: var(--radius-pill);
+  transition: background var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.roster-empty-btn:hover {
+  color: #10131a;
+  background: var(--accent);
+}

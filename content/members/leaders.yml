@@ -1,0 +1,114 @@
+# ============================================================
+#  成员名单 · User Group 主理人 / 大使 / 组织者
+# ============================================================
+#  字段说明见 content/members/heroes.yml 顶部注释。
+#  一个人可以有多个身份，例如 roles: [UGL, HERO]。
+# ============================================================
+
+- id: alex-chen
+  name: 陈晓
+  nickname: Cloud陈
+  roles: [UGL]
+  title: 亚马逊云科技 User Group · 北京主理人
+  city: 北京
+  location: [39.9042, 116.4074]
+  # 在线图片：写完整链接即可，加载失败会自动退回首字色块，不留破图
+  avatar: https://avatars.githubusercontent.com/u/1?v=4
+  skills: [Serverless, DevOps, 社区运营, 公开演讲]
+  bio: 运营北京亚马逊云科技 User Group 6 年，累计组织 80+ 场线下 Meetup，擅长把复杂的云架构讲得通俗易懂。
+  homepage: https://example.com/chenxiao
+  links:
+    - label: 博客
+      url: https://example.com
+
+- id: lin-wei
+  name: 林薇
+  nickname: Vivian
+  roles: [UGA]
+  title: 华东区 User Group 大使
+  city: 上海
+  location: [31.2304, 121.4737]
+  avatar: ""
+  skills: [AI/ML, 数据分析, 跨社区协作, 活动策划]
+  bio: 连接长三角 5 个城市的 User Group，推动区域间联合活动，专注机器学习落地场景。
+  homepage: https://example.com/linwei
+  links: []
+
+- id: wang-min
+  name: 王敏
+  nickname: K8sMin
+  roles: [UGL]
+  title: 成都 User Group · 主理人
+  city: 成都
+  location: [30.5728, 104.0668]
+  avatar: ""
+  skills: [容器, EKS, 社区运营, Kubernetes]
+  bio: 西南地区云原生布道者，带动成都 User Group 从 0 成长到 2000+ 成员。
+  homepage: https://example.com/wangmin
+  links: []
+
+- id: sun-li
+  name: 孙莉
+  nickname: DBLily
+  roles: [UGA]
+  title: 华南区 User Group 大使
+  city: 广州
+  location: [23.1291, 113.2644]
+  avatar: ""
+  skills: [数据库, 迁移, 社区运营, 导师计划]
+  bio: 推动华南区数据库专题系列活动，热心新人引导，建立了完善的社区导师机制。
+  homepage: https://example.com/sunli
+  links: []
+
+- id: li-na
+  name: 李娜
+  nickname: IoTNina
+  roles: [UGL]
+  title: 西安 User Group · 主理人
+  city: 西安
+  location: [34.3416, 108.9398]
+  avatar: ""
+  skills: [IoT, 边缘计算, 社区运营, 高校合作]
+  bio: 深耕西北高校生态，推动 IoT 与边缘计算的产学研结合，培养了大量学生开发者。
+  homepage: https://example.com/lina
+  links: []
+
+# 同时拥有两个身份：第一个 UGL 决定配色，HERO 作为附加徽章展示
+- id: li-shaoyi
+  name: 李少奕
+  nickname: ShawnLi
+  roles: [UGL, HERO]
+  title: 西雅图 User Group · 主理人
+  city: 美国 · 西雅图
+  location: [47.6062, -122.3321]
+  avatar: ""
+  skills: [云架构, Serverless, 社区运营, 中英双语布道]
+  bio: 在西雅图组织本地 User Group，连接中美开发者社区，专注云原生架构的跨地域分享。
+  homepage: https://example.com/lishaoyi
+  links: []
+
+- id: li-xiaofei
+  name: 李小飞
+  nickname: Fei
+  roles: [UGL]
+  title: 东京 User Group · 主理人
+  city: 日本 · 东京
+  location: [35.6762, 139.6503]
+  avatar: ""
+  skills: [AI/ML, 数据分析, 社区运营, 国际化]
+  bio: 在东京运营 User Group，推动亚太地区社区交流，热衷机器学习与数据工程的实践分享。
+  homepage: https://example.com/lixiaofei
+  links: []
+
+- id: qian-jin
+  name: 钱进
+  nickname: JinQ
+  roles: [UGO]
+  title: User Group · 组织者
+  city: 重庆
+  location: [29.5630, 106.5516]
+  avatar: ""
+  skills: [活动策划, 场地协调, 志愿者管理, 社区运营]
+  bio: 负责重庆 User Group 的日常运转，擅长活动策划与团队协调，把控每场活动的落地细节。
+  homepage: https://example.com/qianjin
+  links: []

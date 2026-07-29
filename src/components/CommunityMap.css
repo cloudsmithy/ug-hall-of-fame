@@ -1,0 +1,230 @@
+/* ============================================================
+   社区版图（Leaflet 深色主题覆写）
+   ============================================================ */
+
+.map-shell {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.map-canvas {
+  /* 固定高度，图块加载前也占好位，避免 CLS */
+  height: clamp(320px, 48vh, 520px);
+  width: 100%;
+  /* 瓦片是外部 CDN，个别加载失败会露出底色。
+     用接近深色瓦片的灰蓝，缺块时不会刺眼地露白。 */
+  background: #1b1f27;
+}
+
+/* Leaflet 会给瓦片容器铺白底，一并覆写 */
+.map-canvas .leaflet-container,
+.map-canvas.leaflet-container {
+  background: #1b1f27;
+}
+
+/* Leaflet 默认给瓦片图层一层灰底，深色主题下会透出来 */
+.map-canvas .leaflet-tile-pane {
+  background: #1b1f27;
+}
+
+.map-shell--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(200px, 30vh, 280px);
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--text-subtle);
+  font-size: var(--text-sm);
+}
+
+/* ---------- 加载态 ---------- */
+.map-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--text-subtle);
+  background: var(--bg-raise);
+}
+
+.map-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-strong);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: map-spin 0.8s linear infinite;
+}
+
+@keyframes map-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- 操作提示 ---------- */
+.map-tip {
+  position: absolute;
+  bottom: var(--space-3);
+  left: var(--space-3);
+  z-index: 400;
+  padding: 3px var(--space-3);
+  font-size: 11px;
+  color: var(--text-subtle);
+  background: var(--bg-glass-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  pointer-events: none;
+}
+
+/* ---------- 地图标记 ---------- */
+.map-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 9px;
+  font-weight: 700;
+  /* 深字压亮底，小尺寸下也看得清 */
+  color: #10131a;
+  background: var(--pin-color);
+  /* 水滴形：左上/右上/左下圆，右下尖 */
+  border-radius: 50% 50% 50% 2px;
+  transform: rotate(-45deg);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.map-pin span {
+  /* 把文字转回来，不跟着水滴旋转 */
+  transform: rotate(45deg);
+  white-space: nowrap;
+}
+
+.map-pin:hover {
+  transform: rotate(-45deg) scale(1.14);
+}
+
+/* ---------- 聚合圆点 ---------- */
+.map-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #10131a;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 6px rgba(255, 153, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Popup 深色化 ----------
+   Leaflet 默认白底圆角，跟深色主题冲突，整体覆写。 */
+.map-popup-wrap .leaflet-popup-content-wrapper {
+  background: var(--bg-overlay);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.map-popup-wrap .leaflet-popup-content {
+  margin: var(--space-3) var(--space-4);
+  font-family: var(--font-sans);
+}
+
+.map-popup-wrap .leaflet-popup-tip {
+  background: var(--bg-overlay);
+  border: 1px solid var(--border-strong);
+}
+
+.map-popup-wrap .leaflet-popup-close-button {
+  color: var(--text-subtle) !important;
+  padding: 6px 8px 0 0 !important;
+}
+
+.map-popup-wrap .leaflet-popup-close-button:hover {
+  color: var(--text) !important;
+}
+
+.map-popup {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 150px;
+}
+
+.map-popup strong {
+  font-size: var(--text-base);
+  font-weight: 650;
+}
+
+.map-popup small {
+  font-size: var(--text-xs);
+  color: var(--pin-color);
+}
+
+.map-popup button {
+  height: 32px;
+  padding: 0 var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 650;
+  color: #10131a;
+  background: var(--pin-color);
+  border-radius: var(--radius-pill);
+  transition: filter var(--dur-fast) var(--ease-out);
+}
+
+.map-popup button:hover {
+  filter: brightness(1.1);
+}
+
+/* ---------- Leaflet 控件深色化 ----------
+   Leaflet 自带的 `.leaflet-touch .leaflet-bar a` 特异性比单类高，
+   所以这里同样带上 .leaflet-container 前缀压过它。 */
+.map-shell .leaflet-container .leaflet-bar {
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.map-shell .leaflet-container .leaflet-bar a,
+.map-shell .leaflet-container .leaflet-bar a:hover {
+  background: var(--bg-glass-strong);
+  color: var(--text-muted);
+  border-bottom-color: var(--border);
+}
+
+.map-shell .leaflet-container .leaflet-bar a:hover {
+  background: var(--bg-overlay);
+  color: var(--text);
+}
+
+/* 缩放按钮到达极限时的禁用态 */
+.map-shell .leaflet-container .leaflet-disabled,
+.map-shell .leaflet-container .leaflet-disabled:hover {
+  background: rgba(17, 22, 31, 0.6);
+  color: var(--text-subtle);
+  cursor: default;
+}
+
+.map-shell .leaflet-control-attribution {
+  background: rgba(10, 14, 20, 0.82) !important;
+  color: var(--text-subtle);
+  font-size: 10px;
+}
+
+.map-shell .leaflet-control-attribution a {
+  color: var(--text-muted);
+}
