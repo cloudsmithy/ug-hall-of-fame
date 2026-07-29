@@ -16,6 +16,7 @@ npm run dev        # 开发，默认 http://localhost:5173
 npm run validate   # 校验 content/ 下的 YAML 有没有写错
 npm run build      # 生产构建（会先跑校验），产物在 dist/
 npm run preview    # 本地预览生产构建
+npm run og         # 重新生成分享卡片配图（只在改了图的设计时需要）
 ```
 
 ## 改内容：只动 content/ 下的 YAML
@@ -128,6 +129,31 @@ YAML 是手写的，所以内容加载层做了归一化：缺字段补默认值
 
 因为 hash 前缀和卡片元素 id 一致，带链接打开时浏览器还会自动滚到那张卡片。
 
+### 发到微信 / Slack 的预览卡片
+
+链接发出去会显示标题、描述和一张 1200×630 的配图（Open Graph）。
+内容在 `content/site.yml` 的 `share` 段：
+
+```yaml
+share:
+  title: UG 名人榜 · 亚马逊云科技 Community Hall of Fame
+  description: 记录每一位把云社区带到线下、带到身边的人 —— …
+  siteUrl: https://ug-hall-of-fame.pages.dev   # 必填且不要带结尾斜杠
+  image: /og-cover.jpg
+```
+
+**`siteUrl` 上线后要改成你的正式域名。** 微信、Twitter 这些平台不认相对路径，
+配图地址得是绝对地址，所以这项填错就只有标题没有图 —— 校验器会提醒你没填，
+但填错域名它查不出来。
+
+配图由 `npm run og` 从 `scripts/og-cover.svg` 渲染（用本机 Chrome，为了中文字体
+排版和浏览器一致）。改设计就改那个 SVG 再跑一次。生成好的图已经提交进仓库，
+CI 不会重跑 —— CI 环境没有中文字体，渲出来是方框。
+
+一个说清楚的限制：这是纯前端站，`#member-xxx` 是 hash，服务端看不到。所以
+**分享单个人的链接，预览卡片显示的仍是站点通用信息**，做不到「显示张伟的头像和
+介绍」。要那样得上 SSR 或预渲染，是另一个量级的改动。
+
 ### 弹窗里翻看
 
 弹窗底部有「上一位 / 下一位」，也可以直接按 **← →** 方向键。翻页范围跟着当前
@@ -183,6 +209,9 @@ git push -u origin main
 
 - 构建命令：`npm run build`
 - 输出目录：`dist`
+
+**部署完记得回来改一件事**：把 `content/site.yml` 里的 `share.siteUrl` 换成
+Cloudflare 给你的正式域名，否则链接发到微信/Slack 时不会显示配图。
 
 **B. 从本地推**
 

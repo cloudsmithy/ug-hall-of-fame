@@ -71,6 +71,41 @@ if (site && typeof site === "object") {
       err("content/site.yml", "map.center 必须是两个数字：[纬度, 经度]");
     }
   }
+
+  /* 分享卡片（Open Graph）*/
+  const share = site.share;
+  if (share && typeof share === "object") {
+    const at = "content/site.yml → share";
+
+    if (share.siteUrl) {
+      if (!/^https?:\/\//i.test(String(share.siteUrl))) {
+        err(at, `siteUrl「${share.siteUrl}」必须以 https:// 开头`);
+      } else if (String(share.siteUrl).endsWith("/")) {
+        warn(at, "siteUrl 结尾不要加斜杠，否则图片地址会拼出双斜杠");
+      }
+    } else {
+      warn(
+        at,
+        "没填 siteUrl，分享到微信 / Twitter 时不会显示配图（这些平台不认相对路径）"
+      );
+    }
+
+    // 图片路径写错是最容易漏的：本地看不出来，发出去才发现没图
+    if (share.image) {
+      const p = String(share.image);
+      if (!p.startsWith("/")) {
+        err(at, `image「${p}」应该以 / 开头（相对 public/ 目录，如 /og-cover.jpg）`);
+      } else if (!existsSync(join(ROOT, "public", p.replace(/^\//, "")))) {
+        const pub = existsSync(join(ROOT, "public")) ? readdirSync(join(ROOT, "public")) : [];
+        err(
+          at,
+          `image「${p}」在 public/ 下找不到。` +
+            (pub.length ? ` 现有文件：${pub.join("、")}` : " public/ 是空的。") +
+            " 分享图可以用 npm run og 生成。"
+        );
+      }
+    }
+  }
 }
 
 /* ---------- 本地图片清单 ---------- */

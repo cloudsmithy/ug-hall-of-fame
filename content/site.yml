@@ -34,3 +34,24 @@ footer:
   links:
     - label: 亚马逊云科技开发者社区
       url: https://dev.amazoncloud.cn/
+
+# ------------------------------------------------------------
+#  分享卡片（Open Graph）
+# ------------------------------------------------------------
+#  链接发到微信 / Slack / Twitter 时显示的标题、描述和配图。
+#  改完要重新构建才生效（这些是写进 HTML 的，不是运行时读的）。
+# ------------------------------------------------------------
+share:
+  # 留空则用上面的 title / subtitle
+  title: UG 名人榜 · 亚马逊云科技 Community Hall of Fame
+  description: 记录每一位把云社区带到线下、带到身边的人 —— UGL、UGA、Community Builder 与志愿者的介绍与社区分布地图。
+
+  # 站点上线后的正式地址，用于把下面的图片路径拼成绝对地址。
+  # 微信、Twitter 等平台不认相对路径，所以这项必须填对，
+  # 否则分享出去只有标题没有图。结尾不要加斜杠。
+  siteUrl: https://ug-hall-of-fame.pages.dev
+
+  # 分享配图，放在 public/ 下。建议 1200×630（各平台通吃的比例）
+  # 这张图由 npm run og 从 scripts/og-cover.svg 生成，改设计就改那个 SVG
+  image: /og-cover.jpg
+  imageAlt: UG 名人榜 · 亚马逊云科技 Community Hall of Fame

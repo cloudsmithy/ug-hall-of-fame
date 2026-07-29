@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0a0e14" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta
-      name="description"
-      content="亚马逊云科技 User Group 名人榜：UGL、UGA、Community Builder 与志愿者的介绍与社区分布地图。"
-    />
     <title>UG 名人榜 · 亚马逊云科技 Community Hall of Fame</title>
+
+    <!--
+      分享卡片和 description 的 meta 标签由 vite.config.ts 的 socialMeta 插件
+      在构建期从 content/site.yml 的 share 段读取并注入。改内容请改那个 YAML。
+    -->
+    <!--social-meta-->
   </head>
   <body>
     <div id="root"></div>
