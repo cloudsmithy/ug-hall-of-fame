@@ -1,0 +1,65 @@
+name: 部署到 GitHub Pages
+
+# main 有更新就构建并发布。
+#
+# 前提：仓库 Settings → Pages 的 Source 必须是「GitHub Actions」。
+# 若选的是「Deploy from a branch」，Pages 会把仓库根目录当静态站直接发出去，
+# 那份 index.html 没经过构建（里面还写着 <script src="/src/main.tsx">），
+# 浏览器跑不了 TSX，打开就是白屏。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# deploy-pages 需要写 Pages 的权限和 OIDC token，少一个会 403
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 连着推几次时让后一个排队等前一个发完，别把部署顶成半成品
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # 输出真实的部署地址和路径前缀。用它的输出而不是手写仓库名，
+      # 以后绑自定义域名（base_path 变回 /）也不用改这个文件。
+      - id: pages
+        uses: actions/configure-pages@v5
+        with:
+          # Pages 还没开的话顺手开一下
+          enablement: true
+
+      - run: npm ci
+
+      # BASE_PATH 决定资源前缀，SITE_URL 决定分享卡片里的绝对地址
+      - name: 构建
+        run: npm run build
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

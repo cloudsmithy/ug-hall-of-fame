@@ -27,8 +27,10 @@ function socialMeta(): Plugin {
 
         const title = share.title || site?.title || "UG 名人榜";
         const description = share.description || site?.subtitle || "";
+        // SITE_URL 可以覆盖 YAML 里的地址：同一份内容发到两个域名时，
+        // 分享卡片得指向当前这个（GitHub Pages 的地址还多一段仓库名前缀）。
         // 结尾斜杠会让下面拼出 //og-cover.png，先削掉
-        const siteUrl = (share.siteUrl || "").replace(/\/+$/, "");
+        const siteUrl = (process.env.SITE_URL || share.siteUrl || "").replace(/\/+$/, "");
         const image = share.image || "";
         // 各平台都要求绝对地址，相对路径会被忽略
         const imageUrl = image && siteUrl ? `${siteUrl}${image}` : "";
@@ -63,8 +65,18 @@ function socialMeta(): Plugin {
   };
 }
 
+// 资源前缀。GitHub Pages 的项目站点挂在 /<仓库名>/ 下，打包出来的
+// /assets/... 在那儿是 404，页面直接白屏，所以部署时要传 BASE_PATH。
+// Cloudflare Pages 挂在根路径，不传就还是 "/"，两边共用这一份配置。
+//
+// 结尾斜杠补在这里而不是让调用方保证：Vite 拿 base 直接和资源名相拼，
+// 传 "/ug-hall-of-fame" 会拼出 /ug-hall-of-fameassets/... 这种鬼东西。
+const rawBase = process.env.BASE_PATH || "/";
+const base = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
+
 export default defineConfig({
   plugins: [react(), yaml(), socialMeta()],
+  base,
   build: {
     outDir: "dist",
     // Leaflet 在 CommunityMap.tsx 里是动态 import，

@@ -194,7 +194,7 @@ CI 不会重跑 —— CI 环境没有中文字体，渲出来是方框。
 所以流程是：**别人 fork → 改 YAML → 提 PR → CI 自动查 → 你点合并 → 自动部署。**
 贡献者不用装 node，在 GitHub 网页上编辑 YAML 就能提。
 
-## 部署到 Cloudflare Pages
+## 部署
 
 先把仓库推到 GitHub（仓库已 `git init`，还没有 remote）：
 
@@ -203,7 +203,25 @@ git remote add origin git@github.com:<你的账号>/ug-hall-of-fame.git
 git push -u origin main
 ```
 
-然后二选一：
+### 方案一：GitHub Pages（不用另开账号）
+
+仓库 **Settings → Pages → Source** 选 **GitHub Actions** —— 只此一步，
+之后推 main 就由 `.github/workflows/deploy.yml` 构建发布。
+
+这里有个坑值得单说：Source 若留在默认的「Deploy from a branch」，
+Pages 会把仓库根目录当静态站直接发出去，而根目录那份 `index.html` 是**源文件**，
+里面写的是 `<script src="/src/main.tsx">` —— 浏览器不认 TSX，打开就是白屏。
+必须让 Actions 先构建，发 `dist/`。
+
+项目站点的地址带一段仓库名（`https://<账号>.github.io/ug-hall-of-fame/`），
+所以资源前缀不能是 `/`。workflow 里由 `configure-pages` 输出真实路径，
+经 `BASE_PATH` 传给 Vite 的 `base`；分享卡片的绝对地址同理走 `SITE_URL`，
+会覆盖 `site.yml` 里的 `share.siteUrl`。这两个都不用手写仓库名，
+以后绑自定义域名也不用改 workflow。
+
+### 方案二：Cloudflare Pages
+
+挂在根路径，不用设 `BASE_PATH`。二选一：
 
 **A. Cloudflare Pages 连 Git（推荐，合并 PR 后自动部署）**
 

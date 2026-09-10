@@ -43,6 +43,16 @@ const isRemote = (value: string): boolean => /^(https?:)?\/\//i.test(value);
 const isRootPath = (value: string): boolean => value.startsWith("/");
 
 /**
+ * 给 public/ 下的图补上部署前缀。
+ *
+ * 站点部署在子路径时（GitHub Pages 的项目站点是 /<仓库名>/），YAML 里
+ * 写的 `/avatar.jpg` 指向的是域名根，落到子路径上就 404 了。
+ * BASE_URL 由 vite.config.ts 的 base 决定，本身带结尾斜杠，先削掉再拼。
+ */
+const withBase = (value: string): string =>
+  `${import.meta.env.BASE_URL.replace(/\/+$/, "")}${value}`;
+
+/**
  * 把 YAML 里写的头像值解析成可用的 src。
  *
  * 支持四种写法：
@@ -58,8 +68,9 @@ export function resolveImage(value: string, context: string): string | null {
   const raw = value.trim();
   if (!raw) return null;
 
-  // 在线图片和 public/ 下的图都直接交给浏览器
-  if (isRemote(raw) || isRootPath(raw)) return raw;
+  // 在线图片原样交给浏览器；public/ 下的图要按部署路径补前缀
+  if (isRemote(raw)) return raw;
+  if (isRootPath(raw)) return withBase(raw);
 
   // 剥掉 `./`、`images/`、`content/images/` 之类的前缀，只取文件名
   const filename = raw.replace(/^\.?\/?(content\/)?(images\/)?/, "").split("/").pop();
