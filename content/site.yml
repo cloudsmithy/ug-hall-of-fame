@@ -49,7 +49,10 @@ share:
   # 站点上线后的正式地址，用于把下面的图片路径拼成绝对地址。
   # 微信、Twitter 等平台不认相对路径，所以这项必须填对，
   # 否则分享出去只有标题没有图。结尾不要加斜杠。
-  siteUrl: https://ug-hall-of-fame.pages.dev
+  #
+  # GitHub Pages 的部署 workflow 会用 SITE_URL 覆盖这里，取的是 Pages
+  # 报的真实地址；所以这个值只在本地和别的部署方式下生效。
+  siteUrl: https://cloudsmithy.github.io/ug-hall-of-fame
 
   # 分享配图，放在 public/ 下。建议 1200×630（各平台通吃的比例）
   # 这张图由 npm run og 从 scripts/og-cover.svg 生成，改设计就改那个 SVG

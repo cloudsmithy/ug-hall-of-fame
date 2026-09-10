@@ -138,13 +138,14 @@ YAML 是手写的，所以内容加载层做了归一化：缺字段补默认值
 share:
   title: UG 名人榜 · 亚马逊云科技 Community Hall of Fame
   description: 记录每一位把云社区带到线下、带到身边的人 —— …
-  siteUrl: https://ug-hall-of-fame.pages.dev   # 必填且不要带结尾斜杠
+  siteUrl: https://cloudsmithy.github.io/ug-hall-of-fame   # 必填且不要带结尾斜杠
   image: /og-cover.jpg
 ```
 
 **`siteUrl` 上线后要改成你的正式域名。** 微信、Twitter 这些平台不认相对路径，
 配图地址得是绝对地址，所以这项填错就只有标题没有图 —— 校验器会提醒你没填，
-但填错域名它查不出来。
+但填错域名它查不出来。走 GitHub Pages 部署的话不用管：workflow 会用 Pages
+报的真实地址（`SITE_URL`）覆盖它，fork 出去也是对的。
 
 配图由 `npm run og` 从 `scripts/og-cover.svg` 渲染（用本机 Chrome，为了中文字体
 排版和浏览器一致）。改设计就改那个 SVG 再跑一次。生成好的图已经提交进仓库，
