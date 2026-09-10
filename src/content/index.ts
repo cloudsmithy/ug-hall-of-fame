@@ -34,15 +34,6 @@ const asNumber = (v: unknown, fallback: number): number =>
 const asStringArray = (v: unknown): string[] =>
   Array.isArray(v) ? v.map((x) => asString(x)).filter(Boolean) : [];
 
-/** 坐标必须是 [纬度, 经度] 两个有限数字，否则视为没有坐标 */
-const asLocation = (v: unknown): [number, number] | null => {
-  if (!Array.isArray(v) || v.length < 2) return null;
-  const [lat, lng] = v;
-  if (typeof lat !== "number" || typeof lng !== "number") return null;
-  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
-  return [lat, lng];
-};
-
 const asLinks = (v: unknown): LinkItem[] =>
   Array.isArray(v)
     ? v
@@ -56,7 +47,6 @@ const asLinks = (v: unknown): LinkItem[] =>
 /* ---------- 站点配置 ---------- */
 
 function normalizeSite(raw: Record<string, unknown>): SiteConfig {
-  const map = (raw.map ?? {}) as Record<string, unknown>;
   const sections = (raw.sections ?? {}) as Record<string, unknown>;
   const footer = (raw.footer ?? {}) as Record<string, unknown>;
 
@@ -65,15 +55,7 @@ function normalizeSite(raw: Record<string, unknown>): SiteConfig {
     subtitle: asString(raw.subtitle),
     kicker: asString(raw.kicker, "HALL OF FAME"),
     tagline: asString(raw.tagline),
-    map: {
-      center: asLocation(map.center) ?? [30, 110],
-      zoom: asNumber(map.zoom, 4),
-      autoFit: map.autoFit !== false,
-      autoFitMaxZoom: asNumber(map.autoFitMaxZoom, 6),
-    },
     sections: {
-      map: asString(sections.map, "社区版图"),
-      mapHint: asString(sections.mapHint),
       roster: asString(sections.roster, "社区名人"),
       rosterHint: asString(sections.rosterHint),
     },
@@ -149,7 +131,6 @@ function normalizeMember(raw: unknown, fallbackId: string): Member {
     roles: roleList.length ? roleList : [FALLBACK_ROLE.key],
     title,
     city,
-    location: asLocation(o.location),
     // 头像一次性解析：本地文件名换成带哈希的 URL，在线链接原样保留，
     // 找不到就是 null，由组件退回首字色块
     avatar: avatarRaw ? resolveImage(avatarRaw, `成员 ${name} 的头像`) : null,
@@ -177,7 +158,7 @@ function loadMembers(): Member[] {
     mod.forEach((raw, i) => list.push(normalizeMember(raw, `${path}-${i}`)));
   }
 
-  // id 撞车会让锚点定位和地图联动出错，开发时提示出来
+  // id 撞车会让锚点定位和分享链接指错人，开发时提示出来
   const seen = new Set<string>();
   for (const m of list) {
     if (seen.has(m.id)) console.warn(`[content] 成员 id 重复：${m.id}`);
@@ -198,7 +179,7 @@ function loadMembers(): Member[] {
 
 export const members: Member[] = loadMembers();
 
-/** 主身份：决定卡片配色与地图标记颜色 */
+/** 主身份：决定卡片配色 */
 export const primaryRole = (member: Member): Role => getRole(member.roles[0]);
 
 export type { LinkItem, Member, Role, SiteConfig } from "./types";

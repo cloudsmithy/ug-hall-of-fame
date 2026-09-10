@@ -3,18 +3,17 @@
  *
  * 全部状态都存在 URL 里，由 useUrlState 统一管：
  *   ?role=UGL&q=北京            筛选条件 → 决定 filtered 列表
- *   #member-zhang-wei           打开详情的人 → 驱动弹窗和地图飞行
+ *   #member-zhang-wei           打开详情的人 → 驱动弹窗
  *
  * 好处是任何一屏都能原样分享，前进后退也符合直觉。
  */
 import { useCallback, useMemo } from "react";
-import { Map as MapIcon, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import { members, roles, site } from "./content";
 import { useDebounced, useReducedMotion } from "./lib/hooks";
 import { useUrlState } from "./lib/useUrlState";
 import { Header } from "./components/Header";
 import { Toolbar, ALL_ROLES } from "./components/Toolbar";
-import { CommunityMap } from "./components/CommunityMap";
 import { Roster, RosterSection } from "./components/Roster";
 import { MemberModal } from "./components/MemberModal";
 import { Footer } from "./components/Footer";
@@ -116,28 +115,6 @@ export default function App() {
             resultCount={filtered.length}
             totalCount={members.length}
           />
-
-          <RosterSection
-            title={
-              <>
-                <MapIcon size={18} aria-hidden="true" />
-                {site.sections.map}
-              </>
-            }
-            hint={site.sections.mapHint}
-            // 一个命中都没有时折叠地图：空地球占着半屏高度，
-            // 会把「没找到」的提示和出路挤到首屏之外。
-            // 这里只是隐藏，不卸载组件，用户的缩放位置得以保留。
-            collapsed={filtered.length === 0}
-          >
-            {/* 地图跟着筛选一起变，筛选后只显示命中的成员 */}
-            <CommunityMap
-              members={filtered}
-              site={site}
-              onOpen={handleOpen}
-              focusId={selectedId}
-            />
-          </RosterSection>
 
           <RosterSection
             title={

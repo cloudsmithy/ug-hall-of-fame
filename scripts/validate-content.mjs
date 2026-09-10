@@ -65,12 +65,6 @@ if (rolesRaw !== null) {
 const site = readYaml(join(CONTENT, "site.yml"), "content/site.yml");
 if (site && typeof site === "object") {
   if (!site.title) warn("content/site.yml", "缺少 title，会用默认标题");
-  const center = site.map?.center;
-  if (center !== undefined) {
-    if (!Array.isArray(center) || center.length < 2 || center.some((n) => typeof n !== "number")) {
-      err("content/site.yml", "map.center 必须是两个数字：[纬度, 经度]");
-    }
-  }
 
   /* 分享卡片（Open Graph）*/
   const share = site.share;
@@ -173,20 +167,6 @@ for (const file of memberFiles) {
           err(at, `角色「${key}」没有在 content/roles.yml 里定义。可用：${[...roleKeys].join("、")}`);
         }
       }
-    }
-
-    /* 坐标 */
-    if (m.location !== undefined && m.location !== null) {
-      const loc = m.location;
-      if (!Array.isArray(loc) || loc.length < 2 || loc.some((n) => typeof n !== "number")) {
-        err(at, "location 必须是两个数字：[纬度, 经度]，例如 [39.9042, 116.4074]");
-      } else {
-        const [lat, lng] = loc;
-        if (lat < -90 || lat > 90) err(at, `纬度 ${lat} 超出范围（应在 -90 ~ 90），你可能把经纬度写反了`);
-        if (lng < -180 || lng > 180) err(at, `经度 ${lng} 超出范围（应在 -180 ~ 180）`);
-      }
-    } else {
-      warn(at, "没有 location，这个人不会出现在地图上");
     }
 
     /* 头像 */

@@ -67,16 +67,13 @@ export function RosterSection({
   title,
   hint,
   children,
-  collapsed = false,
 }: {
   title: React.ReactNode;
   hint?: string;
   children: React.ReactNode;
-  /** 收起整个区块，但保留子组件挂载（用于地图这类有内部状态的组件） */
-  collapsed?: boolean;
 }) {
   return (
-    <section className="section" hidden={collapsed}>
+    <section className="section">
       <div className="section-head">
         <h2 className="section-title">{title}</h2>
         {hint && <p className="section-hint">{hint}</p>}

@@ -31,8 +31,6 @@ export interface Member {
   roles: string[];
   title: string;
   city: string;
-  /** [纬度, 经度]；没有坐标的成员不上地图 */
-  location: [number, number] | null;
   /**
    * 头像 src，已解析成可直接用的 URL：
    * content/images/ 下的本地图会带内容哈希，在线图原样保留。
@@ -53,15 +51,7 @@ export interface SiteConfig {
   subtitle: string;
   kicker: string;
   tagline: string;
-  map: {
-    center: [number, number];
-    zoom: number;
-    autoFit: boolean;
-    autoFitMaxZoom: number;
-  };
   sections: {
-    map: string;
-    mapHint: string;
     roster: string;
     rosterHint: string;
   };

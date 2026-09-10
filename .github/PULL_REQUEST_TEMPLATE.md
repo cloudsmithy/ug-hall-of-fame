@@ -20,7 +20,6 @@
 - [ ] 只改了 `content/` 下的文件（如果动了代码，请在上面说明原因）
 - [ ] `id` 是唯一的，用小写英文和连字符（如 `wang-min`）
 - [ ] `roles` 里的角色都在 `content/roles.yml` 里定义过
-- [ ] `location` 是 `[纬度, 经度]`，没写反（中国的纬度在 20~50、经度在 73~135 之间）
 - [ ] 所有 `url` / `homepage` 都以 `https://` 开头
 - [ ] 加了头像的话，图片已放进 `content/images/`，YAML 里写的是文件名
 - [ ] 本地跑过 `npm run validate`（可选，CI 也会跑）

@@ -10,7 +10,6 @@
   roles: [CB]
   title: Community Builder · Serverless 方向
   city: 深圳
-  location: [22.5431, 114.0579]
   avatar: ""
   skills: [Lambda, Serverless, 技术写作, 开源]
   bio: 亚马逊云科技 Community Builder，常年输出 Serverless 实战文章，维护多个开源 SAM 模板项目。
@@ -25,7 +24,6 @@
   roles: [CB]
   title: Community Builder · 安全方向
   city: 杭州
-  location: [30.2741, 120.1551]
   avatar: ""
   skills: [云安全, IAM, 合规, 威胁检测]
   bio: 专注云安全与零信任架构，在多个安全大会担任讲师，活跃于安全社区问答。
@@ -40,7 +38,6 @@
   roles: [CB]
   title: Community Builder · 前端方向
   city: 武汉
-  location: [30.5928, 114.3055]
   avatar: ""
   skills: [Amplify, 前端, Web, 用户体验]
   bio: 全栈开发者，热衷用亚马逊云科技 Amplify 快速构建产品原型，分享大量前端上云经验。
@@ -55,7 +52,6 @@
   roles: [VOL]
   title: 社区志愿者 · 活动支持
   city: 南京
-  location: [32.0603, 118.7969]
   avatar: ""
   skills: [活动支持, 现场协调, 内容运营, 摄影]
   bio: 活跃的社区志愿者，常年参与各地 Meetup 的现场组织与会务支持，记录了大量社区活动影像。

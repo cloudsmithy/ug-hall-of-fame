@@ -9,11 +9,9 @@
 #    name *    姓名
 #    nickname  昵称 / 社区 ID，显示在姓名旁，也参与搜索
 #    roles *   角色列表，取值见 roles.yml 的 key
-#              第一个作为「主身份」，决定卡片配色和地图标记
+#              第一个作为「主身份」，决定卡片配色
 #    title     一句话头衔
-#    city      所在城市（显示用）
-#    location  [纬度, 经度]，用于地图打点；留空则不上地图
-#              坐标查询：Google 地图右键任意位置即可复制
+#    city      所在城市（显示用，也参与搜索）
 #    avatar    头像，三种写法都支持，留空则自动用姓名首字生成色块：
 #                1. 本地图片：把图丢进 content/images/，这里写文件名
 #                   avatar: zhaoyun.jpg
@@ -35,7 +33,6 @@
   roles: [HERO]
   title: Community Hero · 社区标杆
   city: 北京
-  location: [39.9042, 116.4074]
   # 本地图片：文件放在 content/images/sample-avatar.png
   avatar: sample-avatar.png
   skills: [架构设计, 技术领导力, 社区布道, 导师]

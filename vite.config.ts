@@ -79,7 +79,5 @@ export default defineConfig({
   base,
   build: {
     outDir: "dist",
-    // Leaflet 在 CommunityMap.tsx 里是动态 import，
-    // 打包器会自动拆成独立 chunk，首屏不加载。
   },
 });

@@ -1,7 +1,7 @@
 # UG 名人榜 · 亚马逊云科技 Community Hall of Fame
 
 React + TypeScript + Vite 构建的社区名人榜。UGL / UGA / UGO / CB / Hero / 志愿者
-的人物介绍、技能标签、角色徽章、个人主页跳转，以及基于 Leaflet 的真实地图打点。
+的人物介绍、技能标签、角色徽章、个人主页跳转。
 
 **所有内容都在 `content/` 目录的 YAML 里，改内容不用碰代码。**
 
@@ -23,7 +23,7 @@ npm run og         # 重新生成分享卡片配图（只在改了图的设计�
 
 ```
 content/
-├── site.yml              站点标题、副标题、地图初始视角、各区块文案、页脚
+├── site.yml              站点标题、副标题、各区块文案、页脚
 ├── roles.yml             角色定义（颜色、缩写、说明、排序）
 ├── images/               头像照片丢这里，YAML 里写文件名即可
 │   └── sample-avatar.png
@@ -43,8 +43,7 @@ content/
   nickname: SanZ                 # 可选，显示在姓名旁，也参与搜索
   roles: [UGL]                   # 取值见 roles.yml；多身份写 [UGL, HERO]
   title: 某地 User Group · 主理人
-  city: 某地
-  location: [39.9042, 116.4074]  # [纬度, 经度]；留空则不上地图
+  city: 某地                      # 显示用，也参与搜索
   avatar: zhangsan.jpg           # 见下方「加头像照片」；留空用姓名首字色块
   skills: [Serverless, 社区运营]
   bio: 一段人物介绍。
@@ -55,8 +54,6 @@ content/
 ```
 
 字段的完整说明写在 `content/members/heroes.yml` 顶部注释里。
-
-**坐标怎么查**：Google 地图上右键任意位置，直接复制「纬度, 经度」。
 
 ### 加头像照片
 
@@ -93,14 +90,14 @@ avatar: /zhangsan.jpg
 ### 加一个新角色
 
 在 `content/roles.yml` 追加一项，然后在成员的 `roles` 里引用它的 `key`。
-颜色会自动应用到徽章、卡片描边、地图标记、KPI 数字和筛选胶囊。
+颜色会自动应用到徽章、卡片描边、KPI 数字和筛选胶囊。
 
-多身份的成员（如 `roles: [UGL, HERO]`）以第一个作为主身份，决定卡片配色和
-地图标记颜色，其余身份作为附加徽章展示。
+多身份的成员（如 `roles: [UGL, HERO]`）以第一个作为主身份，决定卡片配色，
+其余身份作为附加徽章展示。
 
 ### 容错
 
-YAML 是手写的，所以内容加载层做了归一化：缺字段补默认值，坐标写错就当没坐标，
+YAML 是手写的，所以内容加载层做了归一化：缺字段补默认值，
 角色 key 拼错、成员 id 重复、头像文件名找不到，都会在浏览器控制台给出警告，
 而不是静默变成一片空白。
 
@@ -170,7 +167,7 @@ CI 不会重跑 —— CI 环境没有中文字体，渲出来是方框。
 
 | 文件 | 作用 |
 |---|---|
-| `CONTRIBUTING.md` | 给贡献者看的：怎么改 YAML、字段怎么填、坐标怎么查 |
+| `CONTRIBUTING.md` | 给贡献者看的：怎么改 YAML、字段怎么填 |
 | `.github/PULL_REQUEST_TEMPLATE.md` | 提 PR 时自动带出的自查清单 |
 | `.github/workflows/validate.yml` | PR 一提上来自动跑校验 + 构建 |
 | `scripts/validate-content.mjs` | 校验脚本本体，本地跑 `npm run validate` |
@@ -181,16 +178,14 @@ CI 不会重跑 —— CI 环境没有中文字体，渲出来是方框。
 ✗ content/members/builders.yml → 「王敏」
   角色「UGLL」没有在 content/roles.yml 里定义。可用：HERO、UGL、UGA、UGO、CB、VOL
 ✗ content/members/builders.yml → 「王敏」
-  纬度 200 超出范围（应在 -90 ~ 90），你可能把经纬度写反了
-✗ content/members/builders.yml → 「王敏」
   头像「不存在.jpg」在 content/images/ 里找不到。现有文件：sample-avatar.png
 ✗ content/members/builders.yml → 「王敏」 的第 1 个 link
   url「blog.example.com」必须以 http:// 或 https:// 开头
 ```
 
-覆盖：id 缺失/重复/非法字符、角色未定义、坐标格式与经纬度写反、头像文件找不到、
+覆盖：id 缺失/重复/非法字符、角色未定义、头像文件找不到、
 链接缺 scheme、`links` 结构写错、YAML 语法错误。另有一类「提醒」不拦构建
-（没写 bio、没有坐标不会上地图之类）。
+（没写 bio、没写 skills 之类）。
 
 所以流程是：**别人 fork → 改 YAML → 提 PR → CI 自动查 → 你点合并 → 自动部署。**
 贡献者不用装 node，在 GitHub 网页上编辑 YAML 就能提。
@@ -257,15 +252,11 @@ src/
 - **设计令牌集中在 `src/styles/tokens.css`**，组件样式一律引用变量，不写裸色值。
   改主题只需要改这一个文件。
 - **字体自托管**（`@fontsource-variable`），不依赖 Google Fonts，国内访问更稳。
-- **Leaflet 动态导入**，183KB 的地图代码不进首屏包；加载失败会退回一句说明而不是白屏。
-- **地图跟着筛选联动**，且一个结果都没有时会收起地图 —— 空地球占半屏高度会把
-  「没找到」的提示挤出首屏。收起用的是 `hidden` 而非卸载，用户的缩放位置得以保留。
 - **无障碍**：全站文本对比度 ≥ 5.18:1（WCAG AA 要求 4.5:1）；卡片整块可 Tab 聚焦并
-  回车打开；弹窗有焦点陷阱、ESC 关闭、关闭后焦点归还触发元素；地图标记不占 Tab 位
-  （地图是下方名单的冗余视图，否则键盘用户要按十几次才能走出地图）；
+  回车打开；弹窗有焦点陷阱、ESC 关闭、关闭后焦点归还触发元素；
   尊重系统的「减弱动态效果」。
 
 ## 技术栈
 
-React 19 · TypeScript · Vite 8 · framer-motion · Leaflet + markercluster ·
+React 19 · TypeScript · Vite 8 · framer-motion ·
 lucide-react · @modyfi/vite-plugin-yaml
