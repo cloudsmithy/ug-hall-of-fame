@@ -2,10 +2,86 @@
 #  成员名单 · Community Builder
 # ============================================================
 #  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
-#  筛选所在地为中国大陆的成员；homepage 指向其 Builder Center 主页。
+#  筛选所在地为大中华区（中国大陆、香港、台湾）的成员；homepage 指向其 Builder Center 主页。
 #  字段说明见 content/members/heroes.yml 顶部注释。
 #  一个人有多个身份时只写在一个文件里，按 Hero > UGL > CB 归档。
 # ============================================================
+
+- id: neilkuan
+  name: "Neil Kuan (Yeh Po Kuan)"
+  nickname: "neilkuan"
+  roles: [CB]
+  title: "Community Builder · Containers"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2ZXPg7QvOxZbqgCfpzastGrIdLl.webp"
+  skills: ["Containers"]
+  bio: "DevOps, coding, travel anywhere."
+  homepage: https://builder.aws.com/community/@neilkuan
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@neilkuan
+    - label: "GitHub"
+      url: https://github.com/neilkuan
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/neilkuan
+    - label: "X"
+      url: https://x.com/neil_kuan
+
+- id: kcheung
+  name: "Kitson Cheung"
+  nickname: "kcheung"
+  roles: [CB]
+  title: "Community Builder · Dev Tools"
+  city: "香港 · 新界"
+  avatar: "https://avatars.builderprofile.aws.dev/2wgW1dYXaEiNSN1A6tPpFZtZxkU.webp"
+  skills: ["Dev Tools"]
+  bio: "亚马逊云科技 Community Builder · Dev Tools。"
+  homepage: https://builder.aws.com/community/@kcheung
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@kcheung
+
+- id: gordonwei
+  name: "ChungWei Wei"
+  nickname: "gordonwei"
+  roles: [CB]
+  title: "Community Builder · Containers"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/300UG8LKR5PKYfEaYbXta0AyYN8.webp"
+  skills: ["Containers"]
+  bio: "亚马逊云科技 Community Builder · Containers。"
+  homepage: https://builder.aws.com/community/@gordonwei
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@gordonwei
+    - label: "博客"
+      url: https://www.kmp.tw/
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/gordon-wei-a955906b/
+
+- id: gabrielkoo
+  name: "Gabriel Koo"
+  nickname: "gabrielkoo"
+  roles: [CB]
+  title: "DevSecOps / GenAI / InfoSec"
+  city: "香港 · 新界"
+  avatar: "https://avatars.builderprofile.aws.dev/2Z6WYpPRWD1Qfge2N9VsWJveJ4T.webp"
+  skills: ["Security"]
+  bio: "Worked in three Hong Kong FinTech start-ups, started my career in Actuarial Science/Statistics, became data scientist, full stack developer, cloud and DevOps engineer, InfoSec expert and recently GenAI engineer."
+  homepage: https://builder.aws.com/community/@gabrielkoo
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@gabrielkoo
+    - label: "博客"
+      url: https://gabrielkoo.com
+    - label: "GitHub"
+      url: https://github.com/gabrielkoo
+    - label: "LinkedIn"
+      url: https://linkedin.com/in/gabrielkoo
+    - label: "X"
+      url: https://x.com/gabrielkoo_
+    - label: "DEV"
+      url: https://dev.to/gabrielkoo
 
 - id: barry
   name: "Lei Feng"
@@ -47,6 +123,20 @@
     - label: "Medium"
       url: https://medium.com/@pinxiong.cn
 
+- id: allenhsieh
+  name: "Chang Lin Hsieh"
+  nickname: "allenhsieh"
+  roles: [CB]
+  title: "Community Builder · Serverless"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2yZrkJDKteQY8GtjyupNh9ckXo5.webp"
+  skills: ["Serverless"]
+  bio: "亚马逊云科技 Community Builder · Serverless。"
+  homepage: https://builder.aws.com/community/@allenhsieh
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@allenhsieh
+
 - id: xinfeiyang
   name: "Daniel"
   nickname: "xinfeiyang"
@@ -60,6 +150,124 @@
   links:
     - label: "Builder Center"
       url: https://builder.aws.com/community/@xinfeiyang
+
+- id: tiksangng
+  name: "Dickson Ng"
+  nickname: "tiksangng"
+  roles: [CB]
+  title: "Community Builder · Machine Learning"
+  city: "香港 · 九龙"
+  avatar: ""
+  skills: ["Machine Learning"]
+  bio: "亚马逊云科技 Community Builder · Machine Learning。"
+  homepage: https://builder.aws.com/community/@tiksangng
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@tiksangng
+
+- id: darkfloyd
+  name: "Dr. Anthony Lai"
+  nickname: "darkfloyd"
+  roles: [CB]
+  title: "Community Builder · Security"
+  city: "香港 · 港岛"
+  avatar: "https://avatars.builderprofile.aws.dev/2wJgDtJHlgFlzyss8zU5GA35l67.webp"
+  skills: ["Security"]
+  bio: "Director, VX Research Limited Founder & Chair, VXCON Blackhat USA & Asia Review Board"
+  homepage: https://builder.aws.com/community/@darkfloyd
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@darkfloyd
+    - label: "博客"
+      url: https://www.VXRL.hk
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/anthonation
+
+- id: johnnie
+  name: "Johnnie Ng"
+  nickname: "johnnie"
+  roles: [CB]
+  title: "Community Builder · AI Engineering"
+  city: "香港 · 新界"
+  avatar: "https://avatars.builderprofile.aws.dev/2YsIfQTjOH2ZlVIZ5hm9oFGgTMM.webp"
+  skills: ["AI Engineering"]
+  bio: "AWS Community Builders"
+  homepage: https://builder.aws.com/community/@johnnie
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@johnnie
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/johnnie-ng/
+
+- id: wwkenwong
+  name: "Ken Wong"
+  nickname: "wwkenwong"
+  roles: [CB]
+  title: "Community Builder · Machine Learning"
+  city: "香港 · 港岛"
+  avatar: ""
+  skills: ["Machine Learning"]
+  bio: "亚马逊云科技 Community Builder · Machine Learning。"
+  homepage: https://builder.aws.com/community/@wwkenwong
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@wwkenwong
+
+- id: kevinwang
+  name: "Sheng Hau Wang"
+  nickname: "kevinwang"
+  roles: [CB]
+  title: "Community Builder · Security"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2zzPI81KJf3vvvw6oviNkzzqr22.webp"
+  skills: ["Security"]
+  bio: "亚马逊云科技 Community Builder · Security。"
+  homepage: https://builder.aws.com/community/@kevinwang
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@kevinwang
+    - label: "博客"
+      url: https://60dmx.blogspot.com/
+    - label: "GitHub"
+      url: https://github.com/60DMX
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/60dmx/
+    - label: "YouTube"
+      url: https://www.youtube.com/@60dmx
+
+- id: titanlin
+  name: "Titan Lin"
+  nickname: "titanlin"
+  roles: [CB]
+  title: "Backend Manager"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2yfV0LYMzPu26ISsAtc5f39RlWO.webp"
+  skills: ["Serverless"]
+  bio: "Embrace AWS, build Coooool stuff, and have Fun! ❤️🚀☁️"
+  homepage: https://builder.aws.com/community/@titanlin
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@titanlin
+
+- id: henryluo
+  name: "Henry LUO"
+  nickname: "henryluo"
+  roles: [CB]
+  title: "Community Builder · Machine Learning"
+  city: "香港 · 九龙"
+  avatar: "https://avatars.builderprofile.aws.dev/39SZbxm1YZfd4uG9NEDNQsoGvId.webp"
+  skills: ["Machine Learning"]
+  bio: "A highly self-motivated and enthusiastic data scientist."
+  homepage: https://builder.aws.com/community/@henryluo
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@henryluo
+    - label: "博客"
+      url: https://medium.com/@henryhengluo
+    - label: "GitHub"
+      url: https://github.com/HenryHengLUO
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/henry-heng-luo-8045b49a/
 
 - id: junjiezhang
   name: "Junjie Zhang"
@@ -76,6 +284,106 @@
       url: https://builder.aws.com/community/@junjiezhang
     - label: "博客"
       url: https://www.asfor.cn
+
+- id: kennc
+  name: "Kenny Chan"
+  nickname: "kennc"
+  roles: [CB]
+  title: "Macro Trader | Structured Broker | QuantAI at AWS Community Builder"
+  city: "香港 · 九龙"
+  avatar: "https://avatars.builderprofile.aws.dev/36rO1VTwsc5I4dzYWtVbs8HTytu.webp"
+  skills: ["Machine Learning"]
+  bio: "Control global macro profits, use QuantAI, and build an elite trading career. Top skills: Macro Trading • Structured Brokerage • QuantAI Solutions • Risk Management"
+  homepage: https://builder.aws.com/community/@kennc
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@kennc
+    - label: "个人网站"
+      url: https://future.forem.com/kennc
+    - label: "博客"
+      url: https://medium.com/@kenny-marco-hk
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/kennychenkk/
+    - label: "X"
+      url: https://x.com/kenny_marco_hk
+    - label: "DEV"
+      url: https://dev.to/kennc
+
+- id: kjhdotcom
+  name: "Kevin Huang"
+  nickname: "kjhdotcom"
+  roles: [CB]
+  title: "Community Builder · Machine Learning"
+  city: "台湾"
+  avatar: ""
+  skills: ["Machine Learning"]
+  bio: "亚马逊云科技 Community Builder · Machine Learning。"
+  homepage: https://builder.aws.com/community/@kjhdotcom
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@kjhdotcom
+
+- id: mingxu
+  name: "ming.xu"
+  nickname: "mingxu"
+  roles: [CB]
+  title: "Community Builder · Cloud Operations"
+  city: "台湾"
+  avatar: ""
+  skills: ["Cloud Operations"]
+  bio: "亚马逊云科技 Community Builder · Cloud Operations。"
+  homepage: https://builder.aws.com/community/@mingxu
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@mingxu
+
+- id: tonychung0216
+  name: "Tony Chung"
+  nickname: "tonychung0216"
+  roles: [CB]
+  title: "Community Builder · Security"
+  city: "台湾"
+  avatar: ""
+  skills: ["Security"]
+  bio: "亚马逊云科技 Community Builder · Security。"
+  homepage: https://builder.aws.com/community/@tonychung0216
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@tonychung0216
+
+- id: angelomao
+  name: "Angelo Mao"
+  nickname: "angelomao"
+  roles: [CB]
+  title: "Community Builder · Containers"
+  city: "香港 · 港岛"
+  avatar: "https://avatars.builderprofile.aws.dev/2uCUStmjD3pAMiyMa4jX5AtUNOn.webp"
+  skills: ["Containers"]
+  bio: "Infrastructure Architect"
+  homepage: https://builder.aws.com/community/@angelomao
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@angelomao
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/angelomao1978
+
+- id: borislam
+  name: "Boris Lam"
+  nickname: "borislam"
+  roles: [CB]
+  title: "Community Builder · Containers"
+  city: "香港 · 九龙"
+  avatar: "https://avatars.builderprofile.aws.dev/3CzHCRwOV95tsNpEBNQIcRlAMkt.webp"
+  skills: ["Containers"]
+  bio: "Technology-passionate Software Engineering Manager with 15+ years leading web, mobile, and AWS cloud development. Drives technical innovation through robust architecture design and effective team leadership."
+  homepage: https://builder.aws.com/community/@borislam
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@borislam
+    - label: "博客"
+      url: https://www.borislam.com/
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/boris-l/
 
 - id: dl0510
   name: "Deling han"
@@ -99,21 +407,106 @@
     - label: "DEV"
       url: https://dev.to/derekhan
 
-- id: sanzhanggui
-  name: "Jason Chen"
-  nickname: "sanzhanggui"
+- id: johnnghk
+  name: "John NG"
+  nickname: "johnnghk"
   roles: [CB]
-  title: "Community Builder · Machine Learning"
-  city: "上海"
-  avatar: "https://avatars.builderprofile.aws.dev/2wCxp9qzTglLyheTm5NY9MluecC.webp"
-  skills: ["Machine Learning"]
-  bio: "三掌柜，银行资深架构师，10年全栈开发经验，5年管理经验。Community Builder AWS，亚马逊云科技User Group Leader，亚马逊云科技云博主，BPAA算法模型鉴赏师，CSDN上海站主理人，InfoQ签约作者，Careerfocus特约讲师。另著作《从零基础到精通Flutter开发》、《全栈开发一本通》。全网粉丝10万+，全网著作浏览量1300万+。"
-  homepage: https://builder.aws.com/community/@sanzhanggui
+  title: "Community Builder · Serverless"
+  city: "香港 · 港岛"
+  avatar: "https://avatars.builderprofile.aws.dev/2uDY1A3jCS2iHBYhaGF85fDCgnb.webp"
+  skills: ["Serverless"]
+  bio: "I specialize in leveraging agentic AI & cloud technologies to unlock customer value and enhance operation efficiency with proven use cases. With client-facing experience in both presales activities and project delivery."
+  homepage: https://builder.aws.com/community/@johnnghk
   links:
     - label: "Builder Center"
-      url: https://builder.aws.com/community/@sanzhanggui
+      url: https://builder.aws.com/community/@johnnghk
     - label: "GitHub"
-      url: https://github.com/sanzhanggui
+      url: https://github.com/john-ng-hk
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/john-nch-hk/
+    - label: "DEV"
+      url: https://lnkd.in/gu6NBbtz
+
+- id: gloryfu
+  name: "JUNG-KUANG FU"
+  nickname: "gloryfu"
+  roles: [CB]
+  title: "DBA"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2uULC51HeoM00zSfbDMVUAGqngV.webp"
+  skills: ["Data"]
+  bio: "https://www.youtube.com/@gloryfu"
+  homepage: https://builder.aws.com/community/@gloryfu
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@gloryfu
+    - label: "博客"
+      url: https://gloryfu.blogspot.com/
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/gloryfu/
+    - label: "YouTube"
+      url: https://www.youtube.com/@gloryfu
+
+- id: kimihuang
+  name: "Kimi Huang"
+  nickname: "kimihuang"
+  roles: [CB]
+  title: "Community Builder · Containers"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2wCZalKkGTjMceLZg5f6Scb1eJs.webp"
+  skills: ["Containers"]
+  bio: "I am a Site Reliability Engineer with over 10 years of hands-on experience in architecting, automating, and optimizing solutions on AWS and Azure cloud platforms."
+  homepage: https://builder.aws.com/community/@kimihuang
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@kimihuang
+    - label: "博客"
+      url: https://medium.com/@KimiHuang
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/yu-lin-huang-b2096a87
+    - label: "DEV"
+      url: https://dev.to/kimihuang
+
+- id: mvpkenlin
+  name: "MVPKenLin"
+  roles: [CB]
+  title: "Community Builder · AI Engineering"
+  city: "香港 · 港岛"
+  avatar: "https://avatars.builderprofile.aws.dev/2uQO1OkSgFJ5do8SY3HV6ZuKqN1.webp"
+  skills: ["AI Engineering"]
+  bio: "Please reference in my GitHub"
+  homepage: https://builder.aws.com/community/@mvpkenlin
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@mvpkenlin
+    - label: "博客"
+      url: https://medium.com/@mvpkenlin
+    - label: "GitHub"
+      url: https://github.com/mvpkenlin
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/mvpkenlin
+    - label: "YouTube"
+      url: https://www.youtube.com/@Ken_HK_Talk_IT
+
+- id: shiun
+  name: "Shiun Chiu"
+  nickname: "shiun"
+  roles: [CB]
+  title: "Community Builder · Serverless"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2uDmHq4NfR3fwu4bU0HigQ2jMp6.webp"
+  skills: ["Serverless"]
+  bio: "Hi, I'm Shiun. I have been an AWS Community Builder since 2025, focusing on Serverless, Networking, and Containers. Feel free to reach out if you have any questions about these technologies."
+  homepage: https://builder.aws.com/community/@shiun
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@shiun
+    - label: "博客"
+      url: https://shiun.me
+    - label: "GitHub"
+      url: https://github.com/sh1un
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/shiunchiu
 
 - id: silent
   name: "silent.mo"
@@ -132,6 +525,118 @@
       url: https://blog.silentmo.cn/
     - label: "GitHub"
       url: https://github.com/mo-silent
+
+- id: nanacheng
+  name: "Cheng Yuh Hua"
+  nickname: "nanacheng"
+  roles: [CB]
+  title: "Community Builder · Networking and Content Delivery"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/3ECY8BrWeUeElX9U10YxsMAHP45.webp"
+  skills: ["Networking and Content Delivery"]
+  bio: "亚马逊云科技 Community Builder · Networking and Content Delivery。"
+  homepage: https://builder.aws.com/community/@nanacheng
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@nanacheng
+
+- id: brend058
+  name: "Cheng-Han, Lin"
+  nickname: "brend058"
+  roles: [CB]
+  title: "Cloud Engineer & AI Solution Developer."
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/3Api9jOMJVdl21EWUtgZxJJG6Py.webp"
+  skills: ["AI Engineering"]
+  bio: "In 2023, while volunteering at AWS Community Day, a session on building generative AI and cloud solutions powered by enterprise data set me on the path since — a gradual shift from software systems and web development toward data, AI, and cloud."
+  homepage: https://builder.aws.com/community/@brend058
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@brend058
+    - label: "博客"
+      url: https://new.brlin.org
+    - label: "GitHub"
+      url: https://github.com/BRlin-o
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/cheng-han-lin-br/
+
+- id: djwang
+  name: "Dianjin Wang"
+  nickname: "djwang"
+  roles: [CB]
+  title: "Community Builder · Data"
+  city: "中国大陆"
+  avatar: "https://avatars.builderprofile.aws.dev/3ApGJqQgpg9ZaaUo9qVMo2BCq2P.webp"
+  skills: ["Data"]
+  bio: "Linux/DevOps, Open Source Community."
+  homepage: https://builder.aws.com/community/@djwang
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@djwang
+    - label: "GitHub"
+      url: https://github.com/tuhaihe
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/dianjin-wang/
+
+- id: eddiechan0506
+  name: "Eddie Chan"
+  nickname: "eddiechan0506"
+  roles: [CB]
+  title: "Community Builder · AI Engineering"
+  city: "香港 · 九龙"
+  avatar: "https://avatars.builderprofile.aws.dev/3B0howwImv0xTqkuvNagKkHJZRB.webp"
+  skills: ["AI Engineering"]
+  bio: "AI Engineer who is interested into different topics. I love sharing."
+  homepage: https://builder.aws.com/community/@eddiechan0506
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@eddiechan0506
+    - label: "GitHub"
+      url: https://github.com/unrealandychan
+
+- id: codelaine
+  name: "Fred Cheung"
+  nickname: "codelaine"
+  roles: [CB]
+  title: "Community Builder · Dev Tools"
+  city: "香港 · 九龙"
+  avatar: "https://avatars.builderprofile.aws.dev/3EEx7sMojoUyVpBYxE55VMGEj8J.webp"
+  skills: ["Dev Tools"]
+  bio: "Frontend with AWS - ?"
+  homepage: https://builder.aws.com/community/@codelaine
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@codelaine
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/fred-cheung-5528641a7
+
+- id: jackyho
+  name: "HO Pui Kwan"
+  nickname: "jackyho"
+  roles: [CB]
+  title: "Community Builder · Security"
+  city: "香港"
+  avatar: ""
+  skills: ["Security"]
+  bio: "亚马逊云科技 Community Builder · Security。"
+  homepage: https://builder.aws.com/community/@jackyho
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@jackyho
+
+- id: karentam1225
+  name: "Karen Tam"
+  nickname: "karentam1225"
+  roles: [CB]
+  title: "Community Builder · AI Engineering"
+  city: "香港 · 港岛"
+  avatar: "https://avatars.builderprofile.aws.dev/38OCiSaMpVVezYymEFgwJ4d7ZHr.webp"
+  skills: ["AI Engineering"]
+  bio: "亚马逊云科技 Community Builder · AI Engineering。"
+  homepage: https://builder.aws.com/community/@karentam1225
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@karentam1225
 
 - id: hahing
   name: "Sun Jiaqing"
@@ -154,3 +659,23 @@
       url: https://x.com/HaHingH
     - label: "Facebook"
       url: https://www.facebook.com/profile.php?id=100074520835946
+
+- id: williamleung
+  name: "William Leung"
+  nickname: "williamleung"
+  roles: [CB]
+  title: "Community Builder · Security"
+  city: "香港 · 九龙"
+  avatar: "https://avatars.builderprofile.aws.dev/2Yp8rSI6cme3XHKwYkWhhzRsFTe.webp"
+  skills: ["Security"]
+  bio: "亚马逊云科技 Community Builder · Security。"
+  homepage: https://builder.aws.com/community/@williamleung
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@williamleung
+    - label: "GitHub"
+      url: https://github.com/lshw54
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/william-leung-31821b196?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
+    - label: "DEV"
+      url: https://dev.to/lshw54

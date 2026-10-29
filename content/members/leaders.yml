@@ -2,10 +2,94 @@
 #  成员名单 · User Group Leader
 # ============================================================
 #  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
-#  筛选所在地为中国大陆的成员；homepage 指向其 Builder Center 主页。
+#  筛选所在地为大中华区（中国大陆、香港、台湾）的成员；homepage 指向其 Builder Center 主页。
 #  字段说明见 content/members/heroes.yml 顶部注释。
 #  一个人有多个身份时只写在一个文件里，按 Hero > UGL > CB 归档。
 # ============================================================
+
+- id: ruan330
+  name: "Yang Chou Juan"
+  nickname: "ruan330"
+  roles: [UGL, CB]
+  title: "NCHU · Ex-Co-founder of Taiwan Weather (1M+ downloads)"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/31MQkjxvTHFEymDHovUT5h75GtE.webp"
+  skills: ["Data"]
+  bio: "User Group Leader, Community Builder, and a core member of AWSUGTW. Focused on cloud architecture, high-availability systems, large-scale applications, and cloud transformation. Passionate about community building, knowledge sharing, and tech education."
+  homepage: https://builder.aws.com/community/@ruan330
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@ruan330
+    - label: "GitHub"
+      url: https://github.com/ruan330
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/ycjuan/
+    - label: "Facebook"
+      url: https://www.facebook.com/ruan.yang.zhou
+
+- id: rurucheng
+  name: "Hui-Ju Cheng (Ruru Cheng)"
+  nickname: "rurucheng"
+  roles: [UGL, CB]
+  title: "User Group Leader · Community Builder · Security"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2yU4zDxcoDeSr1ZZfy89Chq95zU.webp"
+  skills: ["Security"]
+  bio: "Deputy Executive Director of PMI Taiwan Awards Office, PMI Taiwan Board Member, ISC2 Taipei Supervisor, and DevSecOps Taiwan Advisor. Global and semiconductor background, advancing security, agility, and project integration."
+  homepage: https://builder.aws.com/community/@rurucheng
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@rurucheng
+    - label: "GitHub"
+      url: https://github.com/cheng-ruru
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/megumi-cheng-pmlife/
+    - label: "YouTube"
+      url: https://www.youtube.com/@ifustw
+    - label: "Facebook"
+      url: https://www.facebook.com/ruru.cheng.967
+
+- id: sanzhanggui
+  name: "Jason Chen"
+  nickname: "sanzhanggui"
+  roles: [UGL, CB]
+  title: "User Group Leader · Community Builder · Machine Learning"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/2wCxp9qzTglLyheTm5NY9MluecC.webp"
+  skills: ["Machine Learning"]
+  bio: "三掌柜，银行资深架构师，10年全栈开发经验，5年管理经验。Community Builder AWS，亚马逊云科技User Group Leader，亚马逊云科技云博主，BPAA算法模型鉴赏师，CSDN上海站主理人，InfoQ签约作者，Careerfocus特约讲师。另著作《从零基础到精通Flutter开发》、《全栈开发一本通》。全网粉丝10万+，全网著作浏览量1300万+。"
+  homepage: https://builder.aws.com/community/@sanzhanggui
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@sanzhanggui
+    - label: "GitHub"
+      url: https://github.com/sanzhanggui
+
+- id: kurohuangaws
+  name: "Kuro Huang"
+  nickname: "kurohuangaws"
+  roles: [UGL, CB]
+  title: "Security Architect | Scuba Diver | Cloud & AI Security | CISSP | CCSP | AWS SAA"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/30bFfJ1M8Fd2RoXSJLzZZjN0CLx.webp"
+  skills: ["Security"]
+  bio: "Hi everyone! I’m Kuro Huang from Taiwan, and I work as a security head. I’m passionate about cloud security, risk management, and building secure architectures on AWS/Azure/GCP. 2025 AWS Community Builder - Security category!"
+  homepage: https://builder.aws.com/community/@kurohuangaws
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@kurohuangaws
+    - label: "个人网站"
+      url: https://portaly.cc/kurohuang
+    - label: "博客"
+      url: https://kuronetwork.me
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/kurohuang/
+    - label: "X"
+      url: https://x.com/catkuroH
+    - label: "DEV"
+      url: https://dev.to/kurohuang
+    - label: "Facebook"
+      url: https://www.facebook.com/kublackstock/
 
 - id: baoyeah
   name: "Yebao Xu"
@@ -41,6 +125,20 @@
     - label: "Builder Center"
       url: https://builder.aws.com/community/@lvzhaobo
 
+- id: annana
+  name: "anna"
+  nickname: "annana"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@annana
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@annana
+
 - id: shanghaidandan
   name: "Dandan Lyu"
   nickname: "shanghaidandan"
@@ -54,6 +152,77 @@
   links:
     - label: "Builder Center"
       url: https://builder.aws.com/community/@shanghaidandan
+
+- id: indeedzcr
+  name: "ErucZHANG"
+  nickname: "indeedzcr"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@indeedzcr
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@indeedzcr
+
+- id: frankychen
+  name: "Franky Chen"
+  nickname: "frankychen"
+  roles: [UGL]
+  title: "AWS Community Builder"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2zlJX94lRbMuSGw5TTChcFbs1aB.webp"
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@frankychen
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@frankychen
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/frankychenn/
+
+- id: huangmingming466
+  name: "HuangMingming"
+  nickname: "huangmingming466"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@huangmingming466
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@huangmingming466
+
+- id: mahuijie05121
+  name: "Huijie Ma"
+  nickname: "mahuijie05121"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "香港"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@mahuijie05121
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@mahuijie05121
+
+- id: jillchen
+  name: "jillchen"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "台湾"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@jillchen
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@jillchen
 
 - id: bailucool
   name: "Jing Guo"
@@ -70,6 +239,33 @@
       url: https://builder.aws.com/community/@bailucool
     - label: "博客"
       url: https://blog.csdn.net/qq_22695001
+
+- id: kimyao
+  name: "Kimyao"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@kimyao
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@kimyao
+
+- id: leo3721
+  name: "Leo Yu"
+  nickname: "leo3721"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: "https://avatars.builderprofile.aws.dev/3F20AXb0l1ldSjw3TscHcyVzPcH.webp"
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@leo3721
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@leo3721
 
 - id: yincma
   name: "Mayinchen"
@@ -89,12 +285,26 @@
     - label: "LinkedIn"
       url: https://www.linkedin.com/in/yinchen-ma/
 
+- id: mikengio
+  name: "Mike, Ng Sin Ching"
+  nickname: "mikengio"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "香港"
+  avatar: "https://avatars.builderprofile.aws.dev/3KzqIl6OtO80o9A3p7BzpPDVYO5.webp"
+  skills: ["User Group"]
+  bio: "Senior Site Reliability Engineer at Bowtie. I work on cloud infrastructure and AI agent systems — reliability, security, and operational governance. Writing at mikeng.io."
+  homepage: https://builder.aws.com/community/@mikengio
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@mikengio
+
 - id: bluetata
   name: "Shenglong Lyu"
   nickname: "bluetata"
   roles: [UGL, CB]
   title: "User Group Leader · Community Builder · AI Engineering"
-  city: "中国"
+  city: "中国大陆"
   avatar: "https://avatars.builderprofile.aws.dev/3EKxpUFLTZxco76BvmrVJh8NElr.webp"
   skills: ["AI Engineering"]
   bio: "亚马逊云科技 User Group Leader、Community Builder · AI Engineering。"
@@ -102,6 +312,20 @@
   links:
     - label: "Builder Center"
       url: https://builder.aws.com/community/@bluetata
+
+- id: amyleetw
+  name: "Shu Mei Lee"
+  nickname: "amyleetw"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "台湾"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@amyleetw
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@amyleetw
 
 - id: tiandeng
   name: "Tian Deng"
@@ -151,12 +375,52 @@
     - label: "Builder Center"
       url: https://builder.aws.com/community/@waynehsu
 
+- id: xiaofeng6330
+  name: "Xiaofeng6330"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@xiaofeng6330
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@xiaofeng6330
+
+- id: xinghua
+  name: "Xinghua Sun"
+  nickname: "xinghua"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@xinghua
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@xinghua
+
+- id: yitong
+  name: "Yitong"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@yitong
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@yitong
+
 - id: yongwen
   name: "yong wen"
   nickname: "yongwen"
   roles: [UGL]
   title: "User Group Leader"
-  city: "中国"
+  city: "中国大陆"
   avatar: "https://avatars.builderprofile.aws.dev/3EiPxPPCGOK1XDrvexRgJ13uaYH.webp"
   skills: ["User Group"]
   bio: "亚马逊云科技 User Group Leader。"
@@ -166,6 +430,33 @@
       url: https://builder.aws.com/community/@yongwen
     - label: "GitHub"
       url: https://github.com/weny2000
+
+- id: liyao
+  name: "yuki"
+  nickname: "liyao"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@liyao
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@liyao
+
+- id: yuxingxin
+  name: "yuxingxin"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@yuxingxin
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@yuxingxin
 
 - id: action
   name: "zhipeng"
@@ -180,6 +471,20 @@
   links:
     - label: "Builder Center"
       url: https://builder.aws.com/community/@action
+
+- id: monster88
+  name: "张润迪"
+  nickname: "monster88"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国大陆"
+  avatar: ""
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@monster88
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@monster88
 
 - id: suganda
   name: "糖水"

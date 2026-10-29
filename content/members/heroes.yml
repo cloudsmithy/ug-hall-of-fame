@@ -7,6 +7,12 @@
 #  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
 #  筛选所在地为中国大陆的成员；homepage 指向其 Builder Center 主页。
 #
+#  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
+#  筛选所在地为大中华区（中国大陆、香港、台湾）的成员；homepage 指向其 Builder Center 主页。
+#
+#  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
+#  筛选所在地为大中华区（中国大陆、香港、台湾）的成员；homepage 指向其 Builder Center 主页。
+#
 #  文件怎么分只是为了方便维护，最终会合并成一份名单；
 #  一个人属于什么角色，只由下面的 roles 字段决定。
 #
@@ -33,6 +39,30 @@
 #    links     其他链接数组，每项含 label + url
 # ============================================================
 
+- id: wongcyrus
+  name: "Cyrus Wong"
+  nickname: "wongcyrus"
+  roles: [HERO, UGL]
+  title: "AWS AI Hero + Microsoft MVP + Google Developer Experts - GCP(AI)"
+  city: "香港 · 新界"
+  avatar: "https://avatars.builderprofile.aws.dev/36ddCTPbJWIsu5rYPgFLUjzxIR8.webp"
+  skills: ["AI"]
+  bio: "Cyrus Wong is an accomplished senior lecturer who oversees the Higher Diploma program in Cloud and Data Centre Administration at the Hong Kong Institute of Information Technology (HKIIT) at IVE(Lee Wai Lee) in Hong Kong. He is a passionate advocate for the adoption of cloud technology across various media and events. With his extensive knowledge and expertise, he has earned prestigious recognitions such as AWS AI Hero, Microsoft MVP - Microsoft Foundry, and Google Developer Expert for Cloud(AI) Microsoft Azure AI MVP https://mvp.microsoft.com/en-US/MVP/profile/86da86ff-8786-ed11-aad1-000d3a197333 Google Developer Expert in Cloud(AI) https://developers.google.com/profile/u/cyruswong Higher Diploma in Cloud and Data Centre Administration https://www.vtc.edu.hk/admission/en/programme/it114115-higher-diploma-in-cloud-and-data-centre-administration/"
+  homepage: https://builder.aws.com/community/@wongcyrus
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@wongcyrus
+    - label: "GitHub"
+      url: https://github.com/wongcyrus
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/cyruswong/
+    - label: "X"
+      url: https://x.com/wongcyrus
+    - label: "YouTube"
+      url: https://www.youtube.com/@cyruswong
+    - label: "Facebook"
+      url: https://www.facebook.com/cywong.vtc
+
 - id: beckyame
   name: "Becky Zhang"
   nickname: "beckyame"
@@ -48,6 +78,28 @@
       url: https://builder.aws.com/community/@beckyame
     - label: "X"
       url: https://x.com/beckyame_0412
+
+- id: ernestchiang
+  name: "Ernest Chiang"
+  nickname: "ernestchiang"
+  roles: [HERO]
+  title: "Community Hero"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/3Izl7laUMLvslpkX9n95BTnp60d.webp"
+  skills: ["Community"]
+  bio: "Ernest Chiang is currently the Director of Product and Technology Integration at PAFERS Tech, and a seasoned technical leader dedicated to knowledge management, information integration, and productivity enhancement. Since 2008, he started engaging with the AWS cloud ecosystem, during which he has continuously deconstructed and restructured various technological architectures. By integrating cloud solutions with business needs, commercial models, and knowledge application strategies, he helps clients enhance operational efficiency and productivity throughout their transformation journeys. Ernest has a solid background in product development and technical management, having worked in the Semiconductor Process Integration Engineering Department (PIE) at TSMC and participated in formulating international Bluetooth specifications (FTMS) for the fitness equipment industry, thereby accumulating extensive cross-disciplinary experience in deconstruction and integration. The Ernest PKM [1] personal knowledge system framework he founded fully demonstrates his unique insights in knowledge management and information integration. In 2020, Ernest became one of the 200+ AWS Heroes worldwide, and he continues to refine his technical skills on his ongoing AWS learning journey, leveraging his cross-disciplinary integration abilities to develop productivity-enhancing solutions (Kyklosify [2]). [1] https://www.ernestchiang.com/en/posts/2023/ernest-pkm-workflow/ [2] https://www.kyklosify.com/"
+  homepage: https://builder.aws.com/community/@ernestchiang
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@ernestchiang
+    - label: "博客"
+      url: https://www.ernestchiang.com/
+    - label: "GitHub"
+      url: https://github.com/dwchiang
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/dwchiang/
+    - label: "X"
+      url: https://twitter.com/dwchiang
 
 - id: danielglh
   name: "Linghui Gong"
@@ -120,6 +172,44 @@
     - label: "Builder Center"
       url: https://builder.aws.com/community/@chaocai
 
+- id: scott516
+  name: "Scott Hsieh"
+  nickname: "scott516"
+  roles: [HERO]
+  title: "Data Hero"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2xrDKOXq84QDc0lenyYB9FDnpsT.webp"
+  skills: ["Data"]
+  bio: "Scott Hsieh, also known as Shu-Jeng Hsieh, is a Lead Data Architect at 104 Corporation where he promotes, plans, and implements a lakehouse paradigm into 104 Corp. within hybrid environments to accelerate data engineering, data analysis, and data science."
+  homepage: https://builder.aws.com/community/@scott516
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@scott516
+    - label: "GitHub"
+      url: https://github.com/HsiehShuJeng
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/shu-jeng-hsieh-5b479543
+    - label: "X"
+      url: https://x.com/fantasticHsieh
+    - label: "DEV"
+      url: https://dev.to/fantastichsieh
+
+- id: alexlau811
+  name: "Alex Lau"
+  nickname: "alexlau811"
+  roles: [HERO, UGL]
+  title: "Community Hero · User Group Leader"
+  city: "香港 · 港岛"
+  avatar: "https://avatars.builderprofile.aws.dev/2ycwh8R6BNPlLxmGuc7ySX7O9JE.webp"
+  skills: ["Community"]
+  bio: "Alex Lau is a Lead Instructor of Tecky Academy with a focus on Full Stack, Mobile App, and AWS technologies. Enthusiastic about teaching and sharing, Alex has been an active leader in the Hong Kong developer community since 2015."
+  homepage: https://builder.aws.com/community/@alexlau811
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@alexlau811
+    - label: "GitHub"
+      url: https://github.com/alexlau811/
+
 - id: mikeyfan
   name: "FAN GUIJU"
   nickname: "mikeyfan"
@@ -139,6 +229,52 @@
       url: https://github.com/jmilkfan
     - label: "LinkedIn"
       url: https://linkedin.com/in/jmilkfan
+
+- id: threeforwyy
+  name: "Ray Lin"
+  nickname: "threeforwyy"
+  roles: [HERO]
+  title: "PMI/ISC2/AWS Authorized Instructor, CISSP/CCSP/CSSLP/SSCP/CISA/CISM/OSWP/CEH Master/AWS x12/PfMP/PMP"
+  city: "台湾"
+  avatar: "https://avatars.builderprofile.aws.dev/2oyzWDERwI3S7mQLpXqxzm7Ub2A.webp"
+  skills: ["Security"]
+  bio: "Ray has been working in the software industry for nearly two decades, specializing in building teams and developing new products from the ground up. His core expertise includes information security and auditing, DevSecOps, AI, AWS cloud architecture design, BA and SA, software project management, and agile SaaS product development. Ray is a recipient of the Taiwan Inventor Creativity Award and has also been recognized with the Rising Star Professional Award and as a Cybersecurity Career Mentor by EC-Council. He has held cross-functional executive roles across a diverse range of organizations, including companies in the United States, Japan, and Taiwan, as well as startups, publicly listed enterprises, and multinational corporations. In addition to holding more than 50 international professional certifications in cybersecurity, cloud, AI, project management, and agile, Ray is also the first AWS Security Hero in GCR and among the world's first cohort. He currently serves as President of DevSecOps Taiwan and CEO of the PMI Taiwan Awards Office, where he is responsible for organizing the Project Management Grand Award, widely regarded by the media as the \"Oscars\" of project management in the Chinese-speaking world. To date, he has also translated and published seven well-known books on agile methodologies."
+  homepage: https://builder.aws.com/community/@threeforwyy
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@threeforwyy
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/raylin-meta-pm/
+    - label: "YouTube"
+      url: https://www.youtube.com/@ifustw
+    - label: "Facebook"
+      url: https://www.facebook.com/raylin.meta.pm
+
+- id: richardfan
+  name: "Richard Fan"
+  nickname: "richardfan"
+  roles: [HERO, UGL]
+  title: "Security Hero · User Group Leader"
+  city: "香港 · 港岛"
+  avatar: "https://avatars.builderprofile.aws.dev/2ZUJk1nHjpIp75f35KboL1RizJC.webp"
+  skills: ["Security"]
+  bio: "Richard is a Security Engineer at ExpressVPN. He is dedicated to helping people easily adopt AWS, and supports them with moving workloads to AWS, promotes best practices, and streamlines cloud governance. The experience Richard has gained over the years has allowed him to focus more on making security on the cloud easy. Richard has developed different tools to simplify the experience with AWS security services for users. He has contributed to the AWS Nitro Enclaves community since its early stage. The nitro-enclave-python-demo project has helped many builders get started on AWS Nitro Enclaves, and it has also been adopted by some AWS workshops. Furthermore, Richard promotes the concept and use cases of enclave technology by partnering with multiple companies to review their AWS Nitro Enclaves offering."
+  homepage: https://builder.aws.com/community/@richardfan
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@richardfan
+    - label: "博客"
+      url: https://blog.richardfan.xyz
+    - label: "GitHub"
+      url: https://github.com/richardfan1126
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/richardfan1126/
+    - label: "X"
+      url: https://twitter.com/richardfan1126
+    - label: "DEV"
+      url: https://dev.to/richardfan1126
+    - label: "Medium"
+      url: https://repost.aws/community/users/USO5y9scJEQV6mC5pjzBZPJw
 
 - id: xiaofei
   name: "Xiaofei Li"
