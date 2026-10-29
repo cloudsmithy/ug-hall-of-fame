@@ -1,106 +1,196 @@
 # ============================================================
-#  成员名单 · User Group 主理人 / 大使 / 组织者
+#  成员名单 · User Group Leader
 # ============================================================
+#  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
+#  筛选所在地为中国大陆的成员；homepage 指向其 Builder Center 主页。
 #  字段说明见 content/members/heroes.yml 顶部注释。
-#  一个人可以有多个身份，例如 roles: [UGL, HERO]。
+#  一个人有多个身份时只写在一个文件里，按 Hero > UGL > CB 归档。
 # ============================================================
 
-- id: alex-chen
-  name: 陈晓
-  nickname: Cloud陈
-  roles: [UGL]
-  title: 亚马逊云科技 User Group · 北京主理人
-  city: 北京
-  # 在线图片：写完整链接即可，加载失败会自动退回首字色块，不留破图
-  avatar: https://avatars.githubusercontent.com/u/1?v=4
-  skills: [Serverless, DevOps, 社区运营, 公开演讲]
-  bio: 运营北京亚马逊云科技 User Group 6 年，累计组织 80+ 场线下 Meetup，擅长把复杂的云架构讲得通俗易懂。
-  homepage: https://example.com/chenxiao
+- id: baoyeah
+  name: "Yebao Xu"
+  nickname: "baoyeah"
+  roles: [UGL, CB]
+  title: "User Group Leader · Community Builder · Containers"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/38JuTDXxwkA77ZbDUN0KrCnGzvI.webp"
+  skills: ["Containers"]
+  bio: "亚马逊云科技 User Group Leader、Community Builder · Containers。"
+  homepage: https://builder.aws.com/community/@baoyeah
   links:
-    - label: 博客
-      url: https://example.com
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@baoyeah
+    - label: "博客"
+      url: https://xybdiy.blog.csdn.net/
+    - label: "GitHub"
+      url: https://github.com/DaBaoDIY
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/yebao-xu-aa9283201/
 
-- id: lin-wei
-  name: 林薇
-  nickname: Vivian
-  roles: [UGA]
-  title: 华东区 User Group 大使
-  city: 上海
-  avatar: ""
-  skills: [AI/ML, 数据分析, 跨社区协作, 活动策划]
-  bio: 连接长三角 5 个城市的 User Group，推动区域间联合活动，专注机器学习落地场景。
-  homepage: https://example.com/linwei
-  links: []
+- id: lvzhaobo
+  name: "Zhaobo Lv"
+  nickname: "lvzhaobo"
+  roles: [UGL, CB]
+  title: "User Group Leader · Community Builder · AI Engineering"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/34Z5E2gBeukc3bmmRNMtA9PvQ0j.webp"
+  skills: ["AI Engineering"]
+  bio: "亚马逊云科技 User Group Leader、Community Builder · AI Engineering。"
+  homepage: https://builder.aws.com/community/@lvzhaobo
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@lvzhaobo
 
-- id: wang-min
-  name: 王敏
-  nickname: K8sMin
+- id: shanghaidandan
+  name: "Dandan Lyu"
+  nickname: "shanghaidandan"
   roles: [UGL]
-  title: 成都 User Group · 主理人
-  city: 成都
-  avatar: ""
-  skills: [容器, EKS, 社区运营, Kubernetes]
-  bio: 西南地区云原生布道者，带动成都 User Group 从 0 成长到 2000+ 成员。
-  homepage: https://example.com/wangmin
-  links: []
+  title: "User Group Leader"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/3ExDvIWbXJNPwQBq1F5wEDvZ6bb.webp"
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@shanghaidandan
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@shanghaidandan
 
-- id: sun-li
-  name: 孙莉
-  nickname: DBLily
-  roles: [UGA]
-  title: 华南区 User Group 大使
-  city: 广州
-  avatar: ""
-  skills: [数据库, 迁移, 社区运营, 导师计划]
-  bio: 推动华南区数据库专题系列活动，热心新人引导，建立了完善的社区导师机制。
-  homepage: https://example.com/sunli
-  links: []
+- id: bailucool
+  name: "Jing Guo"
+  nickname: "bailucool"
+  roles: [UGL, CB]
+  title: "User Group Leader · Community Builder · AI Engineering"
+  city: "四川"
+  avatar: "https://avatars.builderprofile.aws.dev/3EvlPN8XTImlBDYGAV5RBEJXMYz.webp"
+  skills: ["AI Engineering"]
+  bio: "亚马逊云科技 User Group Leader、Community Builder · AI Engineering。"
+  homepage: https://builder.aws.com/community/@bailucool
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@bailucool
+    - label: "博客"
+      url: https://blog.csdn.net/qq_22695001
 
-- id: li-na
-  name: 李娜
-  nickname: IoTNina
+- id: yincma
+  name: "Mayinchen"
+  nickname: "yincma"
+  roles: [UGL, CB]
+  title: "Visiting Professor｜Senior Manager"
+  city: "北京"
+  avatar: "https://avatars.builderprofile.aws.dev/31ttOyRTdxo3ybFpwh98vOoNY3o.webp"
+  skills: ["AI Engineering"]
+  bio: "Yinchen Ma is a cloud, generative AI, and enterprise architecture specialist with deep AWS expertise. He helps organizations turn complex platforms into solutions that are operational, governable, and scalable."
+  homepage: https://builder.aws.com/community/@yincma
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@yincma
+    - label: "GitHub"
+      url: https://github.com/yincma
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/yinchen-ma/
+
+- id: bluetata
+  name: "Shenglong Lyu"
+  nickname: "bluetata"
+  roles: [UGL, CB]
+  title: "User Group Leader · Community Builder · AI Engineering"
+  city: "中国"
+  avatar: "https://avatars.builderprofile.aws.dev/3EKxpUFLTZxco76BvmrVJh8NElr.webp"
+  skills: ["AI Engineering"]
+  bio: "亚马逊云科技 User Group Leader、Community Builder · AI Engineering。"
+  homepage: https://builder.aws.com/community/@bluetata
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@bluetata
+
+- id: tiandeng
+  name: "Tian Deng"
+  nickname: "tiandeng"
+  roles: [UGL, CB]
+  title: "User Group Leader · Community Builder · Cloud Operations"
+  city: "四川"
+  avatar: "https://avatars.builderprofile.aws.dev/3KOjCTlWBOxuekpePIK1pwStDSu.webp"
+  skills: ["Cloud Operations"]
+  bio: "亚马逊云科技 User Group Leader、Community Builder · Cloud Operations。"
+  homepage: https://builder.aws.com/community/@tiandeng
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@tiandeng
+
+- id: damowang
+  name: "WANG YUAN JIE"
+  nickname: "damowang"
   roles: [UGL]
-  title: 西安 User Group · 主理人
-  city: 西安
-  avatar: ""
-  skills: [IoT, 边缘计算, 社区运营, 高校合作]
-  bio: 深耕西北高校生态，推动 IoT 与边缘计算的产学研结合，培养了大量学生开发者。
-  homepage: https://example.com/lina
-  links: []
+  title: "User Group Leader"
+  city: "陕西"
+  avatar: "https://avatars.builderprofile.aws.dev/3KrrkTthYmUuIJqvzmxm0ppr8jg.webp"
+  skills: ["User Group"]
+  bio: "我是 Damo Wang，一名来自中国的资深程序员。岁月渐长，对技术的好奇心始终年轻。 I’m Damo Wang, a seasoned programmer from China. The years go by, but my curiosity for technology stays forever young."
+  homepage: https://builder.aws.com/community/@damowang
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@damowang
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/damo-wang-2067b6108/
+    - label: "X"
+      url: https://x.com/damo_xa
+    - label: "YouTube"
+      url: https://www.youtube.com/@damowang9762
 
-# 同时拥有两个身份：第一个 UGL 决定配色，HERO 作为附加徽章展示
-- id: li-shaoyi
-  name: 李少奕
-  nickname: ShawnLi
-  roles: [UGL, HERO]
-  title: 西雅图 User Group · 主理人
-  city: 美国 · 西雅图
-  avatar: ""
-  skills: [云架构, Serverless, 社区运营, 中英双语布道]
-  bio: 在西雅图组织本地 User Group，连接中美开发者社区，专注云原生架构的跨地域分享。
-  homepage: https://example.com/lishaoyi
-  links: []
-
-- id: li-xiaofei
-  name: 李小飞
-  nickname: Fei
+- id: waynehsu
+  name: "Wayne"
+  nickname: "waynehsu"
   roles: [UGL]
-  title: 东京 User Group · 主理人
-  city: 日本 · 东京
+  title: "User Group Leader"
+  city: "广东"
   avatar: ""
-  skills: [AI/ML, 数据分析, 社区运营, 国际化]
-  bio: 在东京运营 User Group，推动亚太地区社区交流，热衷机器学习与数据工程的实践分享。
-  homepage: https://example.com/lixiaofei
-  links: []
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@waynehsu
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@waynehsu
 
-- id: qian-jin
-  name: 钱进
-  nickname: JinQ
-  roles: [UGO]
-  title: User Group · 组织者
-  city: 重庆
+- id: yongwen
+  name: "yong wen"
+  nickname: "yongwen"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "中国"
+  avatar: "https://avatars.builderprofile.aws.dev/3EiPxPPCGOK1XDrvexRgJ13uaYH.webp"
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@yongwen
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@yongwen
+    - label: "GitHub"
+      url: https://github.com/weny2000
+
+- id: action
+  name: "zhipeng"
+  nickname: "action"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "广东"
   avatar: ""
-  skills: [活动策划, 场地协调, 志愿者管理, 社区运营]
-  bio: 负责重庆 User Group 的日常运转，擅长活动策划与团队协调，把控每场活动的落地细节。
-  homepage: https://example.com/qianjin
-  links: []
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@action
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@action
+
+- id: suganda
+  name: "糖水"
+  nickname: "suganda"
+  roles: [UGL]
+  title: "User Group Leader"
+  city: "广东"
+  avatar: "https://avatars.builderprofile.aws.dev/3J5dkrhCboBsoxPJDAC59LbL9u1.webp"
+  skills: ["User Group"]
+  bio: "亚马逊云科技 User Group Leader。"
+  homepage: https://builder.aws.com/community/@suganda
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@suganda

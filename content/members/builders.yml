@@ -1,59 +1,156 @@
 # ============================================================
-#  成员名单 · Community Builder / 志愿者
+#  成员名单 · Community Builder
 # ============================================================
+#  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
+#  筛选所在地为中国大陆的成员；homepage 指向其 Builder Center 主页。
 #  字段说明见 content/members/heroes.yml 顶部注释。
+#  一个人有多个身份时只写在一个文件里，按 Hero > UGL > CB 归档。
 # ============================================================
 
-- id: zhao-yun
-  name: 赵云
-  nickname: Serverless云
+- id: barry
+  name: "Lei Feng"
+  nickname: "barry"
   roles: [CB]
-  title: Community Builder · Serverless 方向
-  city: 深圳
-  avatar: ""
-  skills: [Lambda, Serverless, 技术写作, 开源]
-  bio: 亚马逊云科技 Community Builder，常年输出 Serverless 实战文章，维护多个开源 SAM 模板项目。
-  homepage: https://github.com/zhaoyun
+  title: "Community Builder · Dev Tools"
+  city: "重庆"
+  avatar: "https://avatars.builderprofile.aws.dev/2ZQDwnl5roak82sKPWYDVSwHyrO.webp"
+  skills: ["Dev Tools"]
+  bio: "AWS Partner SA"
+  homepage: https://builder.aws.com/community/@barry
   links:
-    - label: GitHub
-      url: https://github.com
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@barry
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/fenglei1574
 
-- id: liu-yang
-  name: 刘洋
-  nickname: SecOcean
+- id: pinxiongcn
+  name: "Pin Xiong"
+  nickname: "pinxiongcn"
   roles: [CB]
-  title: Community Builder · 安全方向
-  city: 杭州
-  avatar: ""
-  skills: [云安全, IAM, 合规, 威胁检测]
-  bio: 专注云安全与零信任架构，在多个安全大会担任讲师，活跃于安全社区问答。
-  homepage: https://example.com/liuyang
+  title: "Community Builder · Serverless"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/2r1tQmhWa46fl22aYFir0fkxaUo.webp"
+  skills: ["Serverless"]
+  bio: "I'm Pin Xiong who is crazy about programming and focus on RPC, service mesh, serverless, AI, security etc."
+  homepage: https://builder.aws.com/community/@pinxiongcn
   links:
-    - label: 主页
-      url: https://example.com
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@pinxiongcn
+    - label: "个人网站"
+      url: https://xiongpin.dev/
+    - label: "GitHub"
+      url: https://github.com/pinxiong
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/pinxiong
+    - label: "DEV"
+      url: https://dev.to/pinxiongcn
+    - label: "Medium"
+      url: https://medium.com/@pinxiong.cn
 
-- id: zhou-jie
-  name: 周杰
-  nickname: FrontJay
+- id: xinfeiyang
+  name: "Daniel"
+  nickname: "xinfeiyang"
   roles: [CB]
-  title: Community Builder · 前端方向
-  city: 武汉
-  avatar: ""
-  skills: [Amplify, 前端, Web, 用户体验]
-  bio: 全栈开发者，热衷用亚马逊云科技 Amplify 快速构建产品原型，分享大量前端上云经验。
-  homepage: https://example.com/zhoujie
+  title: "Community Builder · Cloud Operations"
+  city: "江苏"
+  avatar: "https://avatars.builderprofile.aws.dev/2bsooHNxtykDOWtOdxoONzyFTUv.webp"
+  skills: ["Cloud Operations"]
+  bio: "亚马逊云科技 Community Builder · Cloud Operations。"
+  homepage: https://builder.aws.com/community/@xinfeiyang
   links:
-    - label: Twitter
-      url: https://twitter.com
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@xinfeiyang
 
-- id: chen-hao
-  name: 陈浩
-  nickname: Hao哥
-  roles: [VOL]
-  title: 社区志愿者 · 活动支持
-  city: 南京
-  avatar: ""
-  skills: [活动支持, 现场协调, 内容运营, 摄影]
-  bio: 活跃的社区志愿者，常年参与各地 Meetup 的现场组织与会务支持，记录了大量社区活动影像。
-  homepage: https://example.com/chenhao
-  links: []
+- id: junjiezhang
+  name: "Junjie Zhang"
+  nickname: "junjiezhang"
+  roles: [CB]
+  title: "Community Builder · Cloud Operations"
+  city: "湖北"
+  avatar: "https://avatars.builderprofile.aws.dev/3GZKALq0eQTzgttIaucxQGtvECL.webp"
+  skills: ["Cloud Operations"]
+  bio: "AWS Community Builder AWS Certified Solutions Architect – Professional AWS GCR Advocate Blogger Tencent Cloud TVP"
+  homepage: https://builder.aws.com/community/@junjiezhang
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@junjiezhang
+    - label: "博客"
+      url: https://www.asfor.cn
+
+- id: dl0510
+  name: "Deling han"
+  nickname: "dl0510"
+  roles: [CB]
+  title: "Community Builder · Containers"
+  city: "河南"
+  avatar: "https://avatars.builderprofile.aws.dev/34oU17q0AS8bHQcXOm8eI2rla7z.webp"
+  skills: ["Containers"]
+  bio: "Focus on Kubernetes, Docker, and AWS container services (EKS, Fargate). Helping teams build scalable, secure container workflows on AWS."
+  homepage: https://builder.aws.com/community/@dl0510
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@dl0510
+    - label: "博客"
+      url: https://blog.3g7.cn/
+    - label: "GitHub"
+      url: https://github.com/DLh0510
+    - label: "LinkedIn"
+      url: https://linkedin.com/delinghan0510
+    - label: "DEV"
+      url: https://dev.to/derekhan
+
+- id: sanzhanggui
+  name: "Jason Chen"
+  nickname: "sanzhanggui"
+  roles: [CB]
+  title: "Community Builder · Machine Learning"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/2wCxp9qzTglLyheTm5NY9MluecC.webp"
+  skills: ["Machine Learning"]
+  bio: "三掌柜，银行资深架构师，10年全栈开发经验，5年管理经验。Community Builder AWS，亚马逊云科技User Group Leader，亚马逊云科技云博主，BPAA算法模型鉴赏师，CSDN上海站主理人，InfoQ签约作者，Careerfocus特约讲师。另著作《从零基础到精通Flutter开发》、《全栈开发一本通》。全网粉丝10万+，全网著作浏览量1300万+。"
+  homepage: https://builder.aws.com/community/@sanzhanggui
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@sanzhanggui
+    - label: "GitHub"
+      url: https://github.com/sanzhanggui
+
+- id: silent
+  name: "silent.mo"
+  nickname: "silent"
+  roles: [CB]
+  title: "Community Builder · AI Engineering"
+  city: "广东"
+  avatar: "https://avatars.builderprofile.aws.dev/2wEB5wfdm5Rq65LkfUwUyJfwTXf.webp"
+  skills: ["AI Engineering"]
+  bio: "亚马逊云科技 Community Builder · AI Engineering。"
+  homepage: https://builder.aws.com/community/@silent
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@silent
+    - label: "博客"
+      url: https://blog.silentmo.cn/
+    - label: "GitHub"
+      url: https://github.com/mo-silent
+
+- id: hahing
+  name: "Sun Jiaqing"
+  nickname: "hahing"
+  roles: [CB]
+  title: "Community Builder · AI Engineering"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/3ASjuWW4HccIU2eAzzc0hsEAjBZ.webp"
+  skills: ["AI Engineering"]
+  bio: "Senior Enterprise Solutions Architect, AWS User Group Shanghai. 7 years in cloud, focused on enterprise advisory and production engineering at scale. Led cloud migrations; now architecting and operationalizing Agentic AI for enterprises."
+  homepage: https://builder.aws.com/community/@hahing
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@hahing
+    - label: "博客"
+      url: https://mp.weixin.qq.com/s/2FA2Is7vqirNkn6VOUvm8A
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/hahingai
+    - label: "X"
+      url: https://x.com/HaHingH
+    - label: "Facebook"
+      url: https://www.facebook.com/profile.php?id=100074520835946

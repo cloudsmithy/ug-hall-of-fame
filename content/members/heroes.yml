@@ -1,6 +1,12 @@
 # ============================================================
 #  成员名单 · Community Hero
 # ============================================================
+#  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
+#  筛选所在地为中国大陆的成员；homepage 指向其 Builder Center 主页。
+#
+#  数据来源：AWS Builder Center 公开名录（builder.aws.com/community），
+#  筛选所在地为中国大陆的成员；homepage 指向其 Builder Center 主页。
+#
 #  文件怎么分只是为了方便维护，最终会合并成一份名单；
 #  一个人属于什么角色，只由下面的 roles 字段决定。
 #
@@ -27,15 +33,125 @@
 #    links     其他链接数组，每项含 label + url
 # ============================================================
 
-- id: zhang-wei
-  name: 张伟
-  nickname: WeiZ
+- id: beckyame
+  name: "Becky Zhang"
+  nickname: "beckyame"
   roles: [HERO]
-  title: Community Hero · 社区标杆
-  city: 北京
-  # 本地图片：文件放在 content/images/sample-avatar.png
-  avatar: sample-avatar.png
-  skills: [架构设计, 技术领导力, 社区布道, 导师]
-  bio: 深耕社区十余年的标杆人物，影响了一代开发者，长期产出高质量内容并培养了大量社区骨干。
-  homepage: https://example.com/zhangwei
-  links: []
+  title: "Community Hero"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/2yGZxjX82FC4CaVtdfolfVnrAK4.webp"
+  skills: ["Community"]
+  bio: "亚马逊云科技 Community Hero。"
+  homepage: https://builder.aws.com/community/@beckyame
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@beckyame
+    - label: "X"
+      url: https://x.com/beckyame_0412
+
+- id: danielglh
+  name: "Linghui Gong"
+  nickname: "danielglh"
+  roles: [HERO]
+  title: "Community Hero"
+  city: "上海"
+  avatar: "https://avatars.builderprofile.aws.dev/2xnNC01uWaWmLvMyp1t2wJxEAbL.webp"
+  skills: ["Community"]
+  bio: "VP of Engineering in Strikingly.com"
+  homepage: https://builder.aws.com/community/@danielglh
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@danielglh
+    - label: "GitHub"
+      url: https://github.com/danielglh
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/linghuigong
+    - label: "X"
+      url: https://x.com/danielglh
+
+- id: trista0zero
+  name: "Trista Pan"
+  nickname: "trista0zero"
+  roles: [HERO]
+  title: "Data Hero"
+  city: "广东"
+  avatar: "https://avatars.builderprofile.aws.dev/2yGMrIfsfxfvntsANMhnQL4xsgL.webp"
+  skills: ["Data"]
+  bio: "亚马逊云科技 Data Hero。"
+  homepage: https://builder.aws.com/community/@trista0zero
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@trista0zero
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/panjuan/
+    - label: "X"
+      url: https://x.com/tristaZero
+
+- id: wusheng
+  name: "Wu Sheng"
+  nickname: "wusheng"
+  roles: [HERO]
+  title: "Container Hero"
+  city: "北京"
+  avatar: "https://avatars.builderprofile.aws.dev/3AgtyAPOEA9U7IQiC3nChOcDV6A.webp"
+  skills: ["Containers"]
+  bio: "I'm the creator of Apache SkyWalking, an Apache Software Foundation member and former ASF Board Director, and a Founding Engineer at Tetrate. As an open-source maintainer and engineer, I've spent years building technologies that help developers understand, diagnose, and operate complex distributed and cloud-native systems. My work spans distributed tracing, observability, service meshes, eBPF, and large-scale system architecture. More recently, I've been exploring the intersection of AI and observability—making AI agents traceable, measurable, and easier to evaluate and improve, while rethinking how AI can transform software development and user interactions. I'm also an AWS Container Hero and have contributed to multiple Apache projects, including SkyWalking, ShardingSphere, APISIX, and ECharts. I enjoy turning complex engineering challenges into practical open-source solutions and sharing real-world experiences, technical insights, and lessons learned with the developer community."
+  homepage: https://builder.aws.com/community/@wusheng
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@wusheng
+    - label: "GitHub"
+      url: https://github.com/wu-sheng
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/wusheng1108/
+    - label: "X"
+      url: https://x.com/wusheng1108
+
+- id: chaocai
+  name: "chaocai"
+  roles: [HERO]
+  title: "Community Hero"
+  city: "北京"
+  avatar: "https://avatars.builderprofile.aws.dev/2zlGOaii4PbpaF1pUV6jQa87xxE.webp"
+  skills: ["Community"]
+  bio: "20+ years of world-class experience in software development, including more than 10 years as a software architect. Currently the VP and Chief Architect at Mobvista Inc. My WeChat public account is: chao-and-software"
+  homepage: https://builder.aws.com/community/@chaocai
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@chaocai
+
+- id: mikeyfan
+  name: "FAN GUIJU"
+  nickname: "mikeyfan"
+  roles: [HERO]
+  title: "Community Hero"
+  city: "北京"
+  avatar: "https://avatars.builderprofile.aws.dev/2xz2tPagKbRC6yqugI706dnTF9Y.webp"
+  skills: ["Community"]
+  bio: "Cloud-native Application Architect"
+  homepage: https://builder.aws.com/community/@mikeyfan
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@mikeyfan
+    - label: "博客"
+      url: https://is-cloud.blog.csdn.net/
+    - label: "GitHub"
+      url: https://github.com/jmilkfan
+    - label: "LinkedIn"
+      url: https://linkedin.com/in/jmilkfan
+
+- id: xiaofei
+  name: "Xiaofei Li"
+  nickname: "xiaofei"
+  roles: [HERO, UGL, CB]
+  title: "Community Hero · User Group Leader · Community Builder · AI Engineering"
+  city: "北京"
+  avatar: "https://avatars.builderprofile.aws.dev/3HLRikZqqUwxFYJCmEx12HUY7Ak.webp"
+  skills: ["AI Engineering"]
+  bio: "I am passionate about cloud computing and AI. Over the years, I have earned multiple AWS certifications, which have helped me architect scalable and efficient cloud solutions. I actively contribute to the cloud community through blog posts"
+  homepage: https://builder.aws.com/community/@xiaofei
+  links:
+    - label: "Builder Center"
+      url: https://builder.aws.com/community/@xiaofei
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/xiaofei-li-3a78289a/
